@@ -1,7 +1,7 @@
 # MenuMetrics-AI: Executive Cockpit (Brain)
 
 ## Project Overview
-MenuMetrics-AI is a fully autonomous, enterprise-grade Executive Financial Cockpit. It simulates real-world business environments using predictive ML algorithms, dynamic variance detection, and comprehensive OpEx, labor efficiency, and tax/escrow modules.
+MenuMetrics-AI is a fully autonomous, enterprise-grade Executive Financial Cockpit. It simulates real-world business environments using predictive ML algorithms, dynamic variance detection, and comprehensive OpEx, labor efficiency, and tax/escrow modules. It functions as a fully offline or cloud-deployable Progressive Web App (PWA) equipped with a conversational AI agent (Fluffy) and Enterprise Cloud Sync capabilities.
 
 ## Folder Structure
 ```text
@@ -9,29 +9,38 @@ MenuMetrics-AI/
 ├── .streamlit/
 │   └── config.toml           # Enterprise UI configuration (Pitch-Black OLED Theme)
 ├── data/
-│   └── mock_inventory.csv    # Default pre-loaded dummy data
+│   ├── inventory.csv         # Core inventory data
+│   ├── historical_sales.csv  # Historical sales data for ML
+│   ├── monthly_revenue.csv   # Top line revenue tracking
+│   ├── opex_ledger.csv       # Operational expense ledger
+│   ├── purchase_ledger.csv   # Supplier purchases
+│   ├── sku_master.csv        # Master product catalog
+│   └── tax_rates.json        # Global tax and compliance rates
 ├── src/
 │   ├── auto_synthesizer.py   # Generates simulated ledgers and historical sales for custom uploads
 │   ├── ml_model.py           # Linear regression ML model for price elasticity
 │   ├── opex_engine.py        # Logic for calculating Labor Ratios, Fixed/Variable expenses
 │   ├── tax_engine.py         # Logic for Sales and Corporate tax escrows
 │   └── variance_engine.py    # Logic for detecting Purchase Price Variance (PPV)
-├── app.py                    # Main Streamlit Dashboard Application
-├── requirements.txt          # Python dependencies
+├── app.py                    # Main Streamlit Dashboard Application (Includes PWA & Fluffy AI)
+├── generate_data.py          # Data generation scripts
+├── requirements.txt          # Python dependencies (Includes sqlalchemy, psycopg2)
+├── Procfile                  # Cloud deployment configuration for Heroku/Render
 ├── run.bat                   # One-click Windows launcher
 ├── run.py                    # Python programmatic launcher
 └── run.sh                    # One-click Mac/Linux launcher
 ```
 
 ## Completed Modules & Features
-- **Module 1: Inventory Variance & Pricing AI:** Calculates elasticity-based optimal pricing and isolates supply chain inflation.
-- **Module 2: OpEx & Labor Efficiency:** Calculates labor ratios and breakeven targets.
-- **Module 3: Tax & Escrow:** Evaluates Net Profit After Tax (NPAT) and calculates reserve requirements.
-- **Module 4: Executive Waterfall:** Visualizes cash flow from Gross Revenue down to NPAT.
-- **Custom Ingestion Engine:** Accepts custom CSV/Excel files and instantly auto-synthesizes historical ML data and simulated ledgers.
-- **Live Table Editor:** Updates dashboard instantly upon user edits.
-- **Stress Testing:** Models extreme conditions like Recession Shocks and Supply Chain inflation.
-- **Enterprise UX/UI:** Polished with a pitch-black OLED theme, hidden dev menus, and refined interactive elements.
+- **Machine Learning Pricing AI:** Calculates elasticity-based optimal pricing to maximize profit margins.
+- **OpEx & Labor Efficiency:** Tracks fixed vs variable ratios, labor cost percentage, and breakeven targets.
+- **Tax & Escrow:** Evaluates Net Profit After Tax (NPAT) and calculates exact escrow requirements.
+- **Executive Waterfall:** Visualizes cash flow dynamically from Gross Revenue down to NPAT.
+- **Enterprise Cloud Sync:** Ability to seamlessly push optimized datasets to private PostgreSQL databases via SQLAlchemy.
+- **Fluffy AI Companion:** Built-in localized NLP agent for instant, offline natural language queries regarding revenue, items, and margins.
+- **Progressive Web App (PWA):** Aggressive Javascript DOM injection allows the dashboard to be installed locally to any iPhone or Android home screen, running in an immersive standalone mode.
+- **Cloud Deployment Ready:** Successfully configured with a `Procfile` and deployed publicly to Render.com.
+- **Enterprise UX/UI:** Highly polished with a pitch-black OLED theme, responsive media queries for mobile/tablet, and a custom fixed sidebar toggle button.
 
 ## Source Code References
 

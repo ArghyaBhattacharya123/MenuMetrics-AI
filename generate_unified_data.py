@@ -19,9 +19,9 @@ for i in range(100):
     date = start_date + datetime.timedelta(days=i)
     for dish in dishes:
         price_variation = np.random.uniform(-0.2, 0.2)
-        price_sold = round(dish["base_price"] * (1 + price_variation), 2)
-        base_demand = dish["volume"] / 30
-        quantity_sold = int(base_demand + (price_sold - dish["base_price"]) * dish["elasticity"])
+        price_sold = round(float(dish["base_price"]) * (1 + price_variation), 2)
+        base_demand = float(dish["volume"]) / 30
+        quantity_sold = int(base_demand + (price_sold - float(dish["base_price"])) * float(dish["elasticity"]))
         quantity_sold += np.random.randint(-int(max(1, base_demand*0.1)), int(max(1, base_demand*0.1)) + 1)
         quantity_sold = max(1, quantity_sold)
         records.append({

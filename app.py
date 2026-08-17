@@ -250,6 +250,7 @@ if profile_selection != "Demo Mode (Pre-Loaded)":
                 if all(col in uploaded_df.columns for col in required_columns):
                     st.session_state[f"uploaded_data_{profile_selection}"] = uploaded_df
                     
+                    # pyrefly: ignore [missing-import]
                     from src.auto_synthesizer import synthesize_custom_data
                     syn_sku, syn_ledger, syn_opex, syn_rev, syn_hist = synthesize_custom_data(uploaded_df)
                     st.session_state[f"sku_df_{profile_selection}"] = syn_sku
@@ -271,6 +272,7 @@ if profile_selection != "Demo Mode (Pre-Loaded)":
                 edited_df = st.data_editor(current_data, key=f"editor_{profile_selection}")
                 if not edited_df.equals(current_data):
                     st.session_state[f"uploaded_data_{profile_selection}"] = edited_df
+                    # pyrefly: ignore [missing-import]
                     from src.auto_synthesizer import synthesize_custom_data
                     syn_sku, syn_ledger, syn_opex, syn_rev, syn_hist = synthesize_custom_data(edited_df)
                     st.session_state[f"sku_df_{profile_selection}"] = syn_sku
@@ -320,7 +322,8 @@ fx_rates = {
     "KRW": 1360.0, "CHF": 0.90, "VND": 25400.0, "RMB": 7.23, "INR": 83.5
 }
 curr_code = region_selection.split()[0]
-currency_symbol = re.search(r'\((.*?)\)', region_selection).group(1)
+match = re.search(r'\((.*?)\)', region_selection)
+currency_symbol = match.group(1) if match else "$"
 fx_rate = fx_rates.get(curr_code, 1.0)
 
 st.sidebar.header("Simulation Settings")
@@ -422,6 +425,7 @@ try:
     var_df['Total_Variance'] = var_df['Total_Variance'] * fx_rate
 except:
     var_df = pd.DataFrame()
+    ledger_df = pd.DataFrame()
 
 # OpEx Engine Variables
 try:
@@ -437,6 +441,8 @@ try:
 except:
     recent_labor_ratio = 0
     recent_month_data = {}
+    opex_df = pd.DataFrame()
+    efficiency_df = pd.DataFrame()
 
 # Tax Engine Variables
 try:
@@ -498,6 +504,8 @@ with tab0:
     st.subheader("🌊 The Ultimate Cash-Flow Waterfall")
     if tax_results:
         npat = tax_results['npat']
+    else:
+        npat = ebitda
         taxes = tax_results['transaction_tax'] + tax_results['corporate_tax_liability']
         
         fig_master = go.Figure(go.Waterfall(
