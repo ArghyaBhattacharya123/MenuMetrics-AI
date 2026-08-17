@@ -303,8 +303,8 @@ with st.sidebar.expander("Enterprise Cloud Sync"):
                         df_to_push = st.session_state[f"sku_df_{profile_selection}"]
                 
                 if df_to_push is not None and not df_to_push.empty:
-                    with engine.begin() as connection:
-                        df_to_push.to_sql("menumetrics_export", con=connection, if_exists='replace', index=False)
+                    # pyrefly: ignore
+                    df_to_push.to_sql("menumetrics_export", con=engine, if_exists='replace', index=False)
                     st.success("✅ Data successfully synced to Enterprise Database!")
                 else:
                     st.warning("No active data found to sync. Please load data first.")
@@ -513,8 +513,6 @@ with tab0:
     st.subheader("🌊 The Ultimate Cash-Flow Waterfall")
     if tax_results:
         npat = tax_results['npat']
-    else:
-        npat = ebitda
         taxes = tax_results['transaction_tax'] + tax_results['corporate_tax_liability']
         
         fig_master = go.Figure(go.Waterfall(
@@ -556,6 +554,9 @@ with tab0:
         
         fig_master.update_layout(title="Master Cash-Flow Timeline", margin=dict(l=20, r=20, t=50, b=20), height=500)
         st.plotly_chart(fig_master, use_container_width=True)
+    else:
+        npat = ebitda
+        st.warning("Tax engine failed. Cash-flow waterfall could not be generated.")
 
     st.markdown("---")
     
@@ -980,8 +981,8 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 response = f"**{item_match}** sells for **{currency_symbol}{item_data['Current_Price']:,.2f}** with a cost of **{currency_symbol}{item_data['Cost_to_Make']:,.2f}**. You move approximately **{int(item_data['Monthly_Volume']):,} units** per month."
             elif 'most sold' in prompt_lower or 'best seller' in prompt_lower or 'top selling' in prompt_lower:
                 if not df.empty and 'Monthly_Volume' in df.columns:
-                    top_item = df.loc[df['Monthly_Volume'].idxmax()]
-                    response = f"Your most sold item is **{top_item['Dish_Name']}** with a monthly volume of **{int(top_item['Monthly_Volume']):,} units**."
+                    top_item = df.sort_values(by='Monthly_Volume', ascending=False).iloc[0]
+                    response = f"Your most sold item is **{str(top_item['Dish_Name'])}** with a monthly volume of **{int(float(top_item['Monthly_Volume']))} units**."
                 else:
                     response = "I don't have enough data to determine the top seller."
             elif 'inventory' in prompt_lower or 'items' in prompt_lower or 'products' in prompt_lower:
