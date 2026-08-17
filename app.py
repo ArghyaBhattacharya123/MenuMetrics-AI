@@ -223,16 +223,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown("<h1 style='color: #38BDF8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4); margin-bottom: 0.5rem;'>Executive Cockpit</h1>", unsafe_allow_html=True)
 
-# Sidebar
-with st.sidebar:
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        import os
-        if os.path.exists("assets/logo.png"):
-            st.image("assets/logo.png", use_container_width=True)
-        elif os.path.exists("assets/logo.jpg"):
-            st.image("assets/logo.jpg", use_container_width=True)
-    st.markdown("<br>", unsafe_allow_html=True)
+import os
+if os.path.exists("assets/logo.png"):
+    try:
+        st.logo("assets/logo.png")
+    except AttributeError:
+        pass  # Fallback for older Streamlit versions
+elif os.path.exists("assets/logo.jpg"):
+    try:
+        st.logo("assets/logo.jpg")
+    except AttributeError:
+        pass
 
 st.sidebar.header("Account Management")
 profile_selection = st.sidebar.selectbox("Select Business Profile", ["Demo Mode (Pre-Loaded)", "Custom Account 1", "Custom Account 2"])
