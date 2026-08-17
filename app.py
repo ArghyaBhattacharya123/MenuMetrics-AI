@@ -224,31 +224,11 @@ st.markdown("""
 st.markdown("<h1 style='color: #38BDF8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4); margin-bottom: 0.5rem;'>Executive Cockpit</h1>", unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.markdown("""
-    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="120px" height="120px">
-          <!-- Premium Dark OLED Background -->
-          <rect width="400" height="400" rx="80" fill="#121212" stroke="#333333" stroke-width="4"/>
-          
-          <!-- Subtle Financial Grid Lines -->
-          <line x1="60" y1="320" x2="340" y2="320" stroke="#262626" stroke-width="6" stroke-linecap="round"/>
-          <line x1="80" y1="340" x2="80" y2="60" stroke="#262626" stroke-width="6" stroke-linecap="round"/>
-          
-          <!-- The "M" Line Graph (Upward Trend) -->
-          <path d="M 80 260 L 160 110 L 230 190 L 320 80" 
-                fill="none" stroke="#D4AF37" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
-          
-          <!-- Data Points (Gold Nodes) -->
-          <circle cx="80" cy="260" r="16" fill="#121212" stroke="#D4AF37" stroke-width="8"/>
-          <circle cx="160" cy="110" r="16" fill="#121212" stroke="#D4AF37" stroke-width="8"/>
-          <circle cx="230" cy="190" r="16" fill="#121212" stroke="#D4AF37" stroke-width="8"/>
-          
-          <!-- Final Peak Data Point (Glowing) -->
-          <circle cx="320" cy="80" r="20" fill="#D4AF37" />
-          <circle cx="320" cy="80" r="28" fill="none" stroke="#D4AF37" stroke-width="4" opacity="0.5"/>
-        </svg>
-    </div>
-""", unsafe_allow_html=True)
+import os
+if os.path.exists("assets/logo.png"):
+    st.sidebar.image("assets/logo.png", use_container_width=True)
+elif os.path.exists("assets/logo.jpg"):
+    st.sidebar.image("assets/logo.jpg", use_container_width=True)
 
 st.sidebar.header("Account Management")
 profile_selection = st.sidebar.selectbox("Select Business Profile", ["Demo Mode (Pre-Loaded)", "Custom Account 1", "Custom Account 2"])
