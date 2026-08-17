@@ -1,6 +1,6 @@
 # 📊 MenuMetrics-AI (Enterprise Financial Cockpit)
 
-![MenuMetrics-AI Dashboard](docs/screenshot.png)
+![MenuMetrics-AI Dashboard](assets/dashboard.png)
 
 🔥 **Live Web Demo:** [Play Here](https://menumetrics-ai.onrender.com)
 > **Note:** The live demo is hosted on a free Render tier. If it hasn't been visited in 15 minutes, it will spin down to save resources. **It may take 30-60 seconds to wake up** on your first visit. Please be patient!
