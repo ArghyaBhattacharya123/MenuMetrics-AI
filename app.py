@@ -309,7 +309,7 @@ with st.sidebar.expander("Enterprise Cloud Sync"):
                 else:
                     st.warning("No active data found to sync. Please load data first.")
             except Exception as e:
-                st.error("Connection Failed. Check your URL.")
+                st.error(f"Connection Failed: {e}")
 
 region_selection = st.sidebar.selectbox("Select Currency", [
     "USD ($)", "INR (₹)", "EUR (€)", "GBP (£)", "CAD ($)", "GIP (£)", 
