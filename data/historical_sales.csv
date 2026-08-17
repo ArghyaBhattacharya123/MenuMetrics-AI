@@ -1,0 +1,501 @@
+Date,Dish_Name,Price_Sold,Quantity_Sold,Cost
+2026-05-09,Truffle Pasta,21.72,25,8.5
+2026-05-09,Wagyu Burger,30.78,1,12.0
+2026-05-09,Margherita Pizza,16.37,10,4.0
+2026-05-09,Lobster Bisque,15.75,39,7.5
+2026-05-09,Vegan Quinoa Bowl,17.4,35,5.0
+2026-05-10,Truffle Pasta,25.39,1,8.5
+2026-05-10,Wagyu Burger,23.19,95,12.0
+2026-05-10,Margherita Pizza,19.46,1,4.0
+2026-05-10,Lobster Bisque,15.21,38,7.5
+2026-05-10,Vegan Quinoa Bowl,19.96,1,5.0
+2026-05-11,Truffle Pasta,17.68,67,8.5
+2026-05-11,Wagyu Burger,26.48,40,12.0
+2026-05-11,Margherita Pizza,15.86,23,4.0
+2026-05-11,Lobster Bisque,20.83,8,7.5
+2026-05-11,Vegan Quinoa Bowl,22.14,1,5.0
+2026-05-12,Truffle Pasta,19.48,47,8.5
+2026-05-12,Wagyu Burger,22.59,105,12.0
+2026-05-12,Margherita Pizza,20.53,1,4.0
+2026-05-12,Lobster Bisque,18.86,20,7.5
+2026-05-12,Vegan Quinoa Bowl,16.48,52,5.0
+2026-05-13,Truffle Pasta,24.31,1,8.5
+2026-05-13,Wagyu Burger,22.88,92,12.0
+2026-05-13,Margherita Pizza,14.87,56,4.0
+2026-05-13,Lobster Bisque,22.38,4,7.5
+2026-05-13,Vegan Quinoa Bowl,16.27,53,5.0
+2026-05-14,Truffle Pasta,19.63,40,8.5
+2026-05-14,Wagyu Burger,33.25,1,12.0
+2026-05-14,Margherita Pizza,15.96,20,4.0
+2026-05-14,Lobster Bisque,20.88,13,7.5
+2026-05-14,Vegan Quinoa Bowl,19.53,1,5.0
+2026-05-15,Truffle Pasta,28.17,1,8.5
+2026-05-15,Wagyu Burger,27.84,19,12.0
+2026-05-15,Margherita Pizza,17.12,1,4.0
+2026-05-15,Lobster Bisque,18.59,26,7.5
+2026-05-15,Vegan Quinoa Bowl,17.07,34,5.0
+2026-05-16,Truffle Pasta,17.77,66,8.5
+2026-05-16,Wagyu Burger,33.21,1,12.0
+2026-05-16,Margherita Pizza,12.84,112,4.0
+2026-05-16,Lobster Bisque,21.92,3,7.5
+2026-05-16,Vegan Quinoa Bowl,21.51,1,5.0
+2026-05-17,Truffle Pasta,27.79,1,8.5
+2026-05-17,Wagyu Burger,35.21,1,12.0
+2026-05-17,Margherita Pizza,17.79,1,4.0
+2026-05-17,Lobster Bisque,16.11,36,7.5
+2026-05-17,Vegan Quinoa Bowl,17.2,39,5.0
+2026-05-18,Truffle Pasta,24.93,1,8.5
+2026-05-18,Wagyu Burger,26.25,44,12.0
+2026-05-18,Margherita Pizza,16.58,2,4.0
+2026-05-18,Lobster Bisque,24.43,1,7.5
+2026-05-18,Vegan Quinoa Bowl,21.25,1,5.0
+2026-05-19,Truffle Pasta,26.08,1,8.5
+2026-05-19,Wagyu Burger,22.97,93,12.0
+2026-05-19,Margherita Pizza,13.05,110,4.0
+2026-05-19,Lobster Bisque,19.72,15,7.5
+2026-05-19,Vegan Quinoa Bowl,22.57,1,5.0
+2026-05-20,Truffle Pasta,24.25,1,8.5
+2026-05-20,Wagyu Burger,35.6,1,12.0
+2026-05-20,Margherita Pizza,15.12,47,4.0
+2026-05-20,Lobster Bisque,23.56,2,7.5
+2026-05-20,Vegan Quinoa Bowl,15.35,72,5.0
+2026-05-21,Truffle Pasta,27.42,1,8.5
+2026-05-21,Wagyu Burger,34.95,1,12.0
+2026-05-21,Margherita Pizza,20.05,1,4.0
+2026-05-21,Lobster Bisque,17.37,32,7.5
+2026-05-21,Vegan Quinoa Bowl,21.76,1,5.0
+2026-05-22,Truffle Pasta,20.95,31,8.5
+2026-05-22,Wagyu Burger,29.55,1,12.0
+2026-05-22,Margherita Pizza,16.68,1,4.0
+2026-05-22,Lobster Bisque,16.34,36,7.5
+2026-05-22,Vegan Quinoa Bowl,22.89,1,5.0
+2026-05-23,Truffle Pasta,20.01,42,8.5
+2026-05-23,Wagyu Burger,32.24,1,12.0
+2026-05-23,Margherita Pizza,13.32,99,4.0
+2026-05-23,Lobster Bisque,17.55,29,7.5
+2026-05-23,Vegan Quinoa Bowl,18.88,1,5.0
+2026-05-24,Truffle Pasta,19.23,50,8.5
+2026-05-24,Wagyu Burger,22.92,92,12.0
+2026-05-24,Margherita Pizza,20.61,1,4.0
+2026-05-24,Lobster Bisque,15.51,33,7.5
+2026-05-24,Vegan Quinoa Bowl,20.11,1,5.0
+2026-05-25,Truffle Pasta,23.44,6,8.5
+2026-05-25,Wagyu Burger,25.79,52,12.0
+2026-05-25,Margherita Pizza,13.45,99,4.0
+2026-05-25,Lobster Bisque,17.46,28,7.5
+2026-05-25,Vegan Quinoa Bowl,17.71,24,5.0
+2026-05-26,Truffle Pasta,28.42,1,8.5
+2026-05-26,Wagyu Burger,29.9,1,12.0
+2026-05-26,Margherita Pizza,14.01,80,4.0
+2026-05-26,Lobster Bisque,21.81,3,7.5
+2026-05-26,Vegan Quinoa Bowl,19.72,1,5.0
+2026-05-27,Truffle Pasta,17.78,60,8.5
+2026-05-27,Wagyu Burger,33.73,1,12.0
+2026-05-27,Margherita Pizza,17.96,1,4.0
+2026-05-27,Lobster Bisque,24.13,1,7.5
+2026-05-27,Vegan Quinoa Bowl,17.88,19,5.0
+2026-05-28,Truffle Pasta,26.81,1,8.5
+2026-05-28,Wagyu Burger,23.99,82,12.0
+2026-05-28,Margherita Pizza,17.13,1,4.0
+2026-05-28,Lobster Bisque,17.37,32,7.5
+2026-05-28,Vegan Quinoa Bowl,19.05,1,5.0
+2026-05-29,Truffle Pasta,20.26,37,8.5
+2026-05-29,Wagyu Burger,35.01,1,12.0
+2026-05-29,Margherita Pizza,15.51,32,4.0
+2026-05-29,Lobster Bisque,21.85,3,7.5
+2026-05-29,Vegan Quinoa Bowl,22.11,1,5.0
+2026-05-30,Truffle Pasta,26.18,1,8.5
+2026-05-30,Wagyu Burger,34.31,1,12.0
+2026-05-30,Margherita Pizza,14.09,78,4.0
+2026-05-30,Lobster Bisque,21.56,5,7.5
+2026-05-30,Vegan Quinoa Bowl,17.75,29,5.0
+2026-05-31,Truffle Pasta,24.9,1,8.5
+2026-05-31,Wagyu Burger,24.65,67,12.0
+2026-05-31,Margherita Pizza,16.68,1,4.0
+2026-05-31,Lobster Bisque,21.39,12,7.5
+2026-05-31,Vegan Quinoa Bowl,15.98,59,5.0
+2026-06-01,Truffle Pasta,20.21,37,8.5
+2026-06-01,Wagyu Burger,24.9,69,12.0
+2026-06-01,Margherita Pizza,18.0,1,4.0
+2026-06-01,Lobster Bisque,22.05,1,7.5
+2026-06-01,Vegan Quinoa Bowl,19.28,1,5.0
+2026-06-02,Truffle Pasta,24.6,1,8.5
+2026-06-02,Wagyu Burger,25.82,53,12.0
+2026-06-02,Margherita Pizza,20.63,1,4.0
+2026-06-02,Lobster Bisque,23.67,1,7.5
+2026-06-02,Vegan Quinoa Bowl,17.55,24,5.0
+2026-06-03,Truffle Pasta,23.95,1,8.5
+2026-06-03,Wagyu Burger,25.13,61,12.0
+2026-06-03,Margherita Pizza,17.38,1,4.0
+2026-06-03,Lobster Bisque,15.61,36,7.5
+2026-06-03,Vegan Quinoa Bowl,22.35,1,5.0
+2026-06-04,Truffle Pasta,28.08,1,8.5
+2026-06-04,Wagyu Burger,30.14,1,12.0
+2026-06-04,Margherita Pizza,20.64,1,4.0
+2026-06-04,Lobster Bisque,18.0,25,7.5
+2026-06-04,Vegan Quinoa Bowl,16.12,53,5.0
+2026-06-05,Truffle Pasta,21.09,26,8.5
+2026-06-05,Wagyu Burger,30.2,1,12.0
+2026-06-05,Margherita Pizza,18.37,1,4.0
+2026-06-05,Lobster Bisque,15.87,32,7.5
+2026-06-05,Vegan Quinoa Bowl,19.94,1,5.0
+2026-06-06,Truffle Pasta,21.55,21,8.5
+2026-06-06,Wagyu Burger,26.92,39,12.0
+2026-06-06,Margherita Pizza,18.38,1,4.0
+2026-06-06,Lobster Bisque,18.62,23,7.5
+2026-06-06,Vegan Quinoa Bowl,18.18,13,5.0
+2026-06-07,Truffle Pasta,27.14,1,8.5
+2026-06-07,Wagyu Burger,29.42,1,12.0
+2026-06-07,Margherita Pizza,18.0,1,4.0
+2026-06-07,Lobster Bisque,18.41,19,7.5
+2026-06-07,Vegan Quinoa Bowl,15.25,77,5.0
+2026-06-08,Truffle Pasta,24.99,1,8.5
+2026-06-08,Wagyu Burger,28.92,7,12.0
+2026-06-08,Margherita Pizza,17.53,1,4.0
+2026-06-08,Lobster Bisque,17.58,28,7.5
+2026-06-08,Vegan Quinoa Bowl,17.13,37,5.0
+2026-06-09,Truffle Pasta,23.34,6,8.5
+2026-06-09,Wagyu Burger,26.2,47,12.0
+2026-06-09,Margherita Pizza,16.46,7,4.0
+2026-06-09,Lobster Bisque,15.69,35,7.5
+2026-06-09,Vegan Quinoa Bowl,18.1,15,5.0
+2026-06-10,Truffle Pasta,24.61,1,8.5
+2026-06-10,Wagyu Burger,24.26,73,12.0
+2026-06-10,Margherita Pizza,16.93,1,4.0
+2026-06-10,Lobster Bisque,22.75,1,7.5
+2026-06-10,Vegan Quinoa Bowl,18.35,14,5.0
+2026-06-11,Truffle Pasta,20.36,36,8.5
+2026-06-11,Wagyu Burger,23.53,91,12.0
+2026-06-11,Margherita Pizza,18.31,1,4.0
+2026-06-11,Lobster Bisque,16.85,26,7.5
+2026-06-11,Vegan Quinoa Bowl,18.38,13,5.0
+2026-06-12,Truffle Pasta,25.46,1,8.5
+2026-06-12,Wagyu Burger,35.48,1,12.0
+2026-06-12,Margherita Pizza,20.44,1,4.0
+2026-06-12,Lobster Bisque,21.44,7,7.5
+2026-06-12,Vegan Quinoa Bowl,19.91,1,5.0
+2026-06-13,Truffle Pasta,18.12,56,8.5
+2026-06-13,Wagyu Burger,33.01,1,12.0
+2026-06-13,Margherita Pizza,15.54,33,4.0
+2026-06-13,Lobster Bisque,16.09,33,7.5
+2026-06-13,Vegan Quinoa Bowl,15.98,60,5.0
+2026-06-14,Truffle Pasta,22.81,7,8.5
+2026-06-14,Wagyu Burger,28.91,6,12.0
+2026-06-14,Margherita Pizza,15.99,21,4.0
+2026-06-14,Lobster Bisque,21.23,5,7.5
+2026-06-14,Vegan Quinoa Bowl,16.75,43,5.0
+2026-06-15,Truffle Pasta,23.13,4,8.5
+2026-06-15,Wagyu Burger,29.95,1,12.0
+2026-06-15,Margherita Pizza,17.73,1,4.0
+2026-06-15,Lobster Bisque,24.17,1,7.5
+2026-06-15,Vegan Quinoa Bowl,19.58,1,5.0
+2026-06-16,Truffle Pasta,23.91,1,8.5
+2026-06-16,Wagyu Burger,28.82,5,12.0
+2026-06-16,Margherita Pizza,19.37,1,4.0
+2026-06-16,Lobster Bisque,22.99,3,7.5
+2026-06-16,Vegan Quinoa Bowl,22.55,1,5.0
+2026-06-17,Truffle Pasta,18.03,56,8.5
+2026-06-17,Wagyu Burger,31.96,1,12.0
+2026-06-17,Margherita Pizza,18.05,1,4.0
+2026-06-17,Lobster Bisque,17.68,28,7.5
+2026-06-17,Vegan Quinoa Bowl,15.46,70,5.0
+2026-06-18,Truffle Pasta,21.43,28,8.5
+2026-06-18,Wagyu Burger,32.69,1,12.0
+2026-06-18,Margherita Pizza,20.54,1,4.0
+2026-06-18,Lobster Bisque,16.89,34,7.5
+2026-06-18,Vegan Quinoa Bowl,19.52,1,5.0
+2026-06-19,Truffle Pasta,28.5,1,8.5
+2026-06-19,Wagyu Burger,27.61,27,12.0
+2026-06-19,Margherita Pizza,17.44,1,4.0
+2026-06-19,Lobster Bisque,24.04,1,7.5
+2026-06-19,Vegan Quinoa Bowl,16.55,50,5.0
+2026-06-20,Truffle Pasta,25.86,1,8.5
+2026-06-20,Wagyu Burger,25.74,49,12.0
+2026-06-20,Margherita Pizza,17.07,1,4.0
+2026-06-20,Lobster Bisque,23.05,1,7.5
+2026-06-20,Vegan Quinoa Bowl,17.08,36,5.0
+2026-06-21,Truffle Pasta,21.88,25,8.5
+2026-06-21,Wagyu Burger,34.26,1,12.0
+2026-06-21,Margherita Pizza,15.35,38,4.0
+2026-06-21,Lobster Bisque,20.65,11,7.5
+2026-06-21,Vegan Quinoa Bowl,15.23,79,5.0
+2026-06-22,Truffle Pasta,23.69,3,8.5
+2026-06-22,Wagyu Burger,32.93,1,12.0
+2026-06-22,Margherita Pizza,19.05,1,4.0
+2026-06-22,Lobster Bisque,16.07,36,7.5
+2026-06-22,Vegan Quinoa Bowl,23.36,1,5.0
+2026-06-23,Truffle Pasta,25.71,1,8.5
+2026-06-23,Wagyu Burger,35.96,1,12.0
+2026-06-23,Margherita Pizza,18.89,1,4.0
+2026-06-23,Lobster Bisque,16.16,36,7.5
+2026-06-23,Vegan Quinoa Bowl,18.23,18,5.0
+2026-06-24,Truffle Pasta,18.4,53,8.5
+2026-06-24,Wagyu Burger,34.89,1,12.0
+2026-06-24,Margherita Pizza,13.45,96,4.0
+2026-06-24,Lobster Bisque,17.42,30,7.5
+2026-06-24,Vegan Quinoa Bowl,17.77,20,5.0
+2026-06-25,Truffle Pasta,27.28,1,8.5
+2026-06-25,Wagyu Burger,35.66,1,12.0
+2026-06-25,Margherita Pizza,17.54,1,4.0
+2026-06-25,Lobster Bisque,18.77,19,7.5
+2026-06-25,Vegan Quinoa Bowl,21.39,1,5.0
+2026-06-26,Truffle Pasta,25.36,1,8.5
+2026-06-26,Wagyu Burger,23.96,78,12.0
+2026-06-26,Margherita Pizza,14.83,52,4.0
+2026-06-26,Lobster Bisque,19.65,15,7.5
+2026-06-26,Vegan Quinoa Bowl,15.47,74,5.0
+2026-06-27,Truffle Pasta,25.79,1,8.5
+2026-06-27,Wagyu Burger,30.57,1,12.0
+2026-06-27,Margherita Pizza,15.8,21,4.0
+2026-06-27,Lobster Bisque,15.99,31,7.5
+2026-06-27,Vegan Quinoa Bowl,16.41,52,5.0
+2026-06-28,Truffle Pasta,26.42,1,8.5
+2026-06-28,Wagyu Burger,23.01,94,12.0
+2026-06-28,Margherita Pizza,20.74,1,4.0
+2026-06-28,Lobster Bisque,17.6,24,7.5
+2026-06-28,Vegan Quinoa Bowl,23.12,1,5.0
+2026-06-29,Truffle Pasta,19.43,41,8.5
+2026-06-29,Wagyu Burger,32.14,1,12.0
+2026-06-29,Margherita Pizza,17.82,1,4.0
+2026-06-29,Lobster Bisque,18.85,22,7.5
+2026-06-29,Vegan Quinoa Bowl,14.81,86,5.0
+2026-06-30,Truffle Pasta,21.94,23,8.5
+2026-06-30,Wagyu Burger,31.08,1,12.0
+2026-06-30,Margherita Pizza,14.16,74,4.0
+2026-06-30,Lobster Bisque,19.61,13,7.5
+2026-06-30,Vegan Quinoa Bowl,16.79,44,5.0
+2026-07-01,Truffle Pasta,28.32,1,8.5
+2026-07-01,Wagyu Burger,22.85,101,12.0
+2026-07-01,Margherita Pizza,15.28,40,4.0
+2026-07-01,Lobster Bisque,20.93,8,7.5
+2026-07-01,Vegan Quinoa Bowl,21.8,1,5.0
+2026-07-02,Truffle Pasta,22.18,18,8.5
+2026-07-02,Wagyu Burger,30.99,1,12.0
+2026-07-02,Margherita Pizza,13.46,93,4.0
+2026-07-02,Lobster Bisque,20.44,12,7.5
+2026-07-02,Vegan Quinoa Bowl,14.64,83,5.0
+2026-07-03,Truffle Pasta,26.15,1,8.5
+2026-07-03,Wagyu Burger,36.22,1,12.0
+2026-07-03,Margherita Pizza,15.81,29,4.0
+2026-07-03,Lobster Bisque,24.41,1,7.5
+2026-07-03,Vegan Quinoa Bowl,21.94,1,5.0
+2026-07-04,Truffle Pasta,18.01,55,8.5
+2026-07-04,Wagyu Burger,22.59,103,12.0
+2026-07-04,Margherita Pizza,19.72,1,4.0
+2026-07-04,Lobster Bisque,20.28,13,7.5
+2026-07-04,Vegan Quinoa Bowl,23.37,1,5.0
+2026-07-05,Truffle Pasta,24.04,1,8.5
+2026-07-05,Wagyu Burger,35.63,1,12.0
+2026-07-05,Margherita Pizza,14.78,60,4.0
+2026-07-05,Lobster Bisque,16.43,30,7.5
+2026-07-05,Vegan Quinoa Bowl,16.87,41,5.0
+2026-07-06,Truffle Pasta,20.12,34,8.5
+2026-07-06,Wagyu Burger,33.0,1,12.0
+2026-07-06,Margherita Pizza,15.67,32,4.0
+2026-07-06,Lobster Bisque,15.41,34,7.5
+2026-07-06,Vegan Quinoa Bowl,18.69,4,5.0
+2026-07-07,Truffle Pasta,23.32,2,8.5
+2026-07-07,Wagyu Burger,30.13,1,12.0
+2026-07-07,Margherita Pizza,13.51,98,4.0
+2026-07-07,Lobster Bisque,20.8,12,7.5
+2026-07-07,Vegan Quinoa Bowl,21.2,1,5.0
+2026-07-08,Truffle Pasta,24.63,1,8.5
+2026-07-08,Wagyu Burger,35.04,1,12.0
+2026-07-08,Margherita Pizza,15.6,29,4.0
+2026-07-08,Lobster Bisque,21.25,6,7.5
+2026-07-08,Vegan Quinoa Bowl,22.54,1,5.0
+2026-07-09,Truffle Pasta,23.62,1,8.5
+2026-07-09,Wagyu Burger,33.37,1,12.0
+2026-07-09,Margherita Pizza,16.99,1,4.0
+2026-07-09,Lobster Bisque,24.22,1,7.5
+2026-07-09,Vegan Quinoa Bowl,18.53,5,5.0
+2026-07-10,Truffle Pasta,23.01,8,8.5
+2026-07-10,Wagyu Burger,28.83,4,12.0
+2026-07-10,Margherita Pizza,17.77,1,4.0
+2026-07-10,Lobster Bisque,18.32,21,7.5
+2026-07-10,Vegan Quinoa Bowl,19.24,1,5.0
+2026-07-11,Truffle Pasta,19.01,50,8.5
+2026-07-11,Wagyu Burger,32.17,1,12.0
+2026-07-11,Margherita Pizza,14.26,75,4.0
+2026-07-11,Lobster Bisque,19.11,17,7.5
+2026-07-11,Vegan Quinoa Bowl,19.04,1,5.0
+2026-07-12,Truffle Pasta,24.22,1,8.5
+2026-07-12,Wagyu Burger,22.97,95,12.0
+2026-07-12,Margherita Pizza,15.56,34,4.0
+2026-07-12,Lobster Bisque,16.04,30,7.5
+2026-07-12,Vegan Quinoa Bowl,19.21,1,5.0
+2026-07-13,Truffle Pasta,19.02,53,8.5
+2026-07-13,Wagyu Burger,23.69,88,12.0
+2026-07-13,Margherita Pizza,18.3,1,4.0
+2026-07-13,Lobster Bisque,23.5,1,7.5
+2026-07-13,Vegan Quinoa Bowl,16.89,38,5.0
+2026-07-14,Truffle Pasta,18.53,52,8.5
+2026-07-14,Wagyu Burger,24.98,68,12.0
+2026-07-14,Margherita Pizza,16.68,2,4.0
+2026-07-14,Lobster Bisque,20.25,10,7.5
+2026-07-14,Vegan Quinoa Bowl,21.13,1,5.0
+2026-07-15,Truffle Pasta,19.06,47,8.5
+2026-07-15,Wagyu Burger,34.93,1,12.0
+2026-07-15,Margherita Pizza,16.38,6,4.0
+2026-07-15,Lobster Bisque,18.97,24,7.5
+2026-07-15,Vegan Quinoa Bowl,21.04,1,5.0
+2026-07-16,Truffle Pasta,21.14,30,8.5
+2026-07-16,Wagyu Burger,23.65,89,12.0
+2026-07-16,Margherita Pizza,19.92,1,4.0
+2026-07-16,Lobster Bisque,19.7,14,7.5
+2026-07-16,Vegan Quinoa Bowl,20.24,1,5.0
+2026-07-17,Truffle Pasta,18.56,55,8.5
+2026-07-17,Wagyu Burger,30.62,1,12.0
+2026-07-17,Margherita Pizza,17.49,1,4.0
+2026-07-17,Lobster Bisque,18.8,20,7.5
+2026-07-17,Vegan Quinoa Bowl,17.67,23,5.0
+2026-07-18,Truffle Pasta,20.29,38,8.5
+2026-07-18,Wagyu Burger,30.88,1,12.0
+2026-07-18,Margherita Pizza,12.86,114,4.0
+2026-07-18,Lobster Bisque,16.65,33,7.5
+2026-07-18,Vegan Quinoa Bowl,18.79,7,5.0
+2026-07-19,Truffle Pasta,27.46,1,8.5
+2026-07-19,Wagyu Burger,23.12,96,12.0
+2026-07-19,Margherita Pizza,18.38,1,4.0
+2026-07-19,Lobster Bisque,16.26,30,7.5
+2026-07-19,Vegan Quinoa Bowl,19.58,1,5.0
+2026-07-20,Truffle Pasta,17.66,64,8.5
+2026-07-20,Wagyu Burger,26.01,52,12.0
+2026-07-20,Margherita Pizza,18.58,1,4.0
+2026-07-20,Lobster Bisque,22.03,7,7.5
+2026-07-20,Vegan Quinoa Bowl,18.69,6,5.0
+2026-07-21,Truffle Pasta,19.66,44,8.5
+2026-07-21,Wagyu Burger,32.35,1,12.0
+2026-07-21,Margherita Pizza,16.86,1,4.0
+2026-07-21,Lobster Bisque,20.23,9,7.5
+2026-07-21,Vegan Quinoa Bowl,19.9,1,5.0
+2026-07-22,Truffle Pasta,23.99,1,8.5
+2026-07-22,Wagyu Burger,26.89,34,12.0
+2026-07-22,Margherita Pizza,13.21,100,4.0
+2026-07-22,Lobster Bisque,19.52,17,7.5
+2026-07-22,Vegan Quinoa Bowl,14.97,77,5.0
+2026-07-23,Truffle Pasta,21.15,25,8.5
+2026-07-23,Wagyu Burger,23.63,85,12.0
+2026-07-23,Margherita Pizza,12.82,119,4.0
+2026-07-23,Lobster Bisque,20.86,13,7.5
+2026-07-23,Vegan Quinoa Bowl,19.85,1,5.0
+2026-07-24,Truffle Pasta,21.44,21,8.5
+2026-07-24,Wagyu Burger,34.31,1,12.0
+2026-07-24,Margherita Pizza,13.79,89,4.0
+2026-07-24,Lobster Bisque,24.61,1,7.5
+2026-07-24,Vegan Quinoa Bowl,16.03,57,5.0
+2026-07-25,Truffle Pasta,27.79,1,8.5
+2026-07-25,Wagyu Burger,23.07,96,12.0
+2026-07-25,Margherita Pizza,19.42,1,4.0
+2026-07-25,Lobster Bisque,17.12,27,7.5
+2026-07-25,Vegan Quinoa Bowl,15.88,62,5.0
+2026-07-26,Truffle Pasta,20.19,37,8.5
+2026-07-26,Wagyu Burger,26.83,41,12.0
+2026-07-26,Margherita Pizza,18.26,1,4.0
+2026-07-26,Lobster Bisque,19.37,16,7.5
+2026-07-26,Vegan Quinoa Bowl,20.02,1,5.0
+2026-07-27,Truffle Pasta,25.82,1,8.5
+2026-07-27,Wagyu Burger,25.65,51,12.0
+2026-07-27,Margherita Pizza,15.93,19,4.0
+2026-07-27,Lobster Bisque,20.36,16,7.5
+2026-07-27,Vegan Quinoa Bowl,16.46,52,5.0
+2026-07-28,Truffle Pasta,18.89,52,8.5
+2026-07-28,Wagyu Burger,27.06,32,12.0
+2026-07-28,Margherita Pizza,15.48,34,4.0
+2026-07-28,Lobster Bisque,22.74,1,7.5
+2026-07-28,Vegan Quinoa Bowl,19.2,1,5.0
+2026-07-29,Truffle Pasta,23.9,2,8.5
+2026-07-29,Wagyu Burger,32.93,1,12.0
+2026-07-29,Margherita Pizza,19.03,1,4.0
+2026-07-29,Lobster Bisque,15.52,38,7.5
+2026-07-29,Vegan Quinoa Bowl,20.83,1,5.0
+2026-07-30,Truffle Pasta,27.24,1,8.5
+2026-07-30,Wagyu Burger,23.84,81,12.0
+2026-07-30,Margherita Pizza,16.46,5,4.0
+2026-07-30,Lobster Bisque,18.97,23,7.5
+2026-07-30,Vegan Quinoa Bowl,15.75,64,5.0
+2026-07-31,Truffle Pasta,25.54,1,8.5
+2026-07-31,Wagyu Burger,22.57,99,12.0
+2026-07-31,Margherita Pizza,18.35,1,4.0
+2026-07-31,Lobster Bisque,22.0,5,7.5
+2026-07-31,Vegan Quinoa Bowl,21.84,1,5.0
+2026-08-01,Truffle Pasta,24.02,3,8.5
+2026-08-01,Wagyu Burger,28.33,18,12.0
+2026-08-01,Margherita Pizza,16.85,1,4.0
+2026-08-01,Lobster Bisque,17.63,29,7.5
+2026-08-01,Vegan Quinoa Bowl,22.25,1,5.0
+2026-08-02,Truffle Pasta,27.71,1,8.5
+2026-08-02,Wagyu Burger,35.31,1,12.0
+2026-08-02,Margherita Pizza,18.01,1,4.0
+2026-08-02,Lobster Bisque,20.67,15,7.5
+2026-08-02,Vegan Quinoa Bowl,18.22,18,5.0
+2026-08-03,Truffle Pasta,26.84,1,8.5
+2026-08-03,Wagyu Burger,24.12,78,12.0
+2026-08-03,Margherita Pizza,20.68,1,4.0
+2026-08-03,Lobster Bisque,16.38,37,7.5
+2026-08-03,Vegan Quinoa Bowl,17.39,33,5.0
+2026-08-04,Truffle Pasta,23.31,9,8.5
+2026-08-04,Wagyu Burger,30.91,1,12.0
+2026-08-04,Margherita Pizza,18.75,1,4.0
+2026-08-04,Lobster Bisque,22.68,5,7.5
+2026-08-04,Vegan Quinoa Bowl,15.43,70,5.0
+2026-08-05,Truffle Pasta,23.51,5,8.5
+2026-08-05,Wagyu Burger,27.25,28,12.0
+2026-08-05,Margherita Pizza,16.65,1,4.0
+2026-08-05,Lobster Bisque,20.78,9,7.5
+2026-08-05,Vegan Quinoa Bowl,16.63,51,5.0
+2026-08-06,Truffle Pasta,23.08,10,8.5
+2026-08-06,Wagyu Burger,22.87,92,12.0
+2026-08-06,Margherita Pizza,15.7,30,4.0
+2026-08-06,Lobster Bisque,17.29,25,7.5
+2026-08-06,Vegan Quinoa Bowl,20.37,1,5.0
+2026-08-07,Truffle Pasta,28.33,1,8.5
+2026-08-07,Wagyu Burger,24.48,73,12.0
+2026-08-07,Margherita Pizza,19.69,1,4.0
+2026-08-07,Lobster Bisque,19.97,11,7.5
+2026-08-07,Vegan Quinoa Bowl,17.19,38,5.0
+2026-08-08,Truffle Pasta,22.29,20,8.5
+2026-08-08,Wagyu Burger,34.97,1,12.0
+2026-08-08,Margherita Pizza,13.09,110,4.0
+2026-08-08,Lobster Bisque,20.78,7,7.5
+2026-08-08,Vegan Quinoa Bowl,21.38,1,5.0
+2026-08-09,Truffle Pasta,23.37,2,8.5
+2026-08-09,Wagyu Burger,28.01,20,12.0
+2026-08-09,Margherita Pizza,18.92,1,4.0
+2026-08-09,Lobster Bisque,16.93,32,7.5
+2026-08-09,Vegan Quinoa Bowl,22.92,1,5.0
+2026-08-10,Truffle Pasta,24.68,1,8.5
+2026-08-10,Wagyu Burger,22.76,95,12.0
+2026-08-10,Margherita Pizza,19.74,1,4.0
+2026-08-10,Lobster Bisque,15.46,39,7.5
+2026-08-10,Vegan Quinoa Bowl,16.68,48,5.0
+2026-08-11,Truffle Pasta,24.99,1,8.5
+2026-08-11,Wagyu Burger,23.86,82,12.0
+2026-08-11,Margherita Pizza,14.23,69,4.0
+2026-08-11,Lobster Bisque,20.49,15,7.5
+2026-08-11,Vegan Quinoa Bowl,15.29,77,5.0
+2026-08-12,Truffle Pasta,25.54,1,8.5
+2026-08-12,Wagyu Burger,33.7,1,12.0
+2026-08-12,Margherita Pizza,20.36,1,4.0
+2026-08-12,Lobster Bisque,17.15,31,7.5
+2026-08-12,Vegan Quinoa Bowl,22.47,1,5.0
+2026-08-13,Truffle Pasta,24.57,1,8.5
+2026-08-13,Wagyu Burger,25.31,58,12.0
+2026-08-13,Margherita Pizza,13.78,84,4.0
+2026-08-13,Lobster Bisque,20.74,8,7.5
+2026-08-13,Vegan Quinoa Bowl,22.43,1,5.0
+2026-08-14,Truffle Pasta,21.36,23,8.5
+2026-08-14,Wagyu Burger,27.48,29,12.0
+2026-08-14,Margherita Pizza,14.94,51,4.0
+2026-08-14,Lobster Bisque,18.48,26,7.5
+2026-08-14,Vegan Quinoa Bowl,18.33,11,5.0
+2026-08-15,Truffle Pasta,28.03,1,8.5
+2026-08-15,Wagyu Burger,33.32,1,12.0
+2026-08-15,Margherita Pizza,19.75,1,4.0
+2026-08-15,Lobster Bisque,24.56,1,7.5
+2026-08-15,Vegan Quinoa Bowl,21.6,1,5.0
+2026-08-16,Truffle Pasta,22.93,6,8.5
+2026-08-16,Wagyu Burger,26.16,50,12.0
+2026-08-16,Margherita Pizza,18.39,1,4.0
+2026-08-16,Lobster Bisque,17.65,27,7.5
+2026-08-16,Vegan Quinoa Bowl,20.21,1,5.0
