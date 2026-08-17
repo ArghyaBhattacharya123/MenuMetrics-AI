@@ -297,13 +297,14 @@ with st.sidebar.expander("Enterprise Cloud Sync"):
                 # Fetch active data
                 df_to_push = None
                 if profile_selection == "Demo Mode (Pre-Loaded)":
-                    df_to_push = pd.read_csv("data/mock_inventory.csv")
+                    df_to_push = pd.read_csv("data/inventory.csv")
                 else:
                     if f"sku_df_{profile_selection}" in st.session_state:
                         df_to_push = st.session_state[f"sku_df_{profile_selection}"]
                 
                 if df_to_push is not None and not df_to_push.empty:
-                    df_to_push.to_sql("menumetrics_export", engine, if_exists='replace', index=False)
+                    with engine.begin() as connection:
+                        df_to_push.to_sql("menumetrics_export", con=connection, if_exists='replace', index=False)
                     st.success("✅ Data successfully synced to Enterprise Database!")
                 else:
                     st.warning("No active data found to sync. Please load data first.")
@@ -321,10 +322,16 @@ fx_rates = {
     "CNY": 7.23, "KWD": 0.31, "IRR": 42000.0, "JPY": 155.0, "RUB": 92.0, 
     "KRW": 1360.0, "CHF": 0.90, "VND": 25400.0, "RMB": 7.23, "INR": 83.5
 }
+region_to_country = {
+    "USD": "US", "INR": "IN", "EUR": "EU", "GBP": "GB", "CAD": "CA",
+    "GIP": "GI", "CNY": "CN", "KWD": "KW", "IRR": "IR", "JPY": "JP",
+    "RUB": "RU", "KRW": "KR", "CHF": "CH", "VND": "VN", "RMB": "CN"
+}
 curr_code = region_selection.split()[0]
 match = re.search(r'\((.*?)\)', region_selection)
 currency_symbol = match.group(1) if match else "$"
 fx_rate = fx_rates.get(curr_code, 1.0)
+region_code = region_to_country.get(curr_code, "US")
 
 st.sidebar.header("Simulation Settings")
 stress_scenario = st.sidebar.selectbox("Macro Stress Test Scenario", ["Normal Market Conditions", "📉 Recession Shock (-20% Volume)", "⚡ Supply Chain Crisis (+15% Cost Inflation)"])
@@ -423,7 +430,8 @@ try:
     var_df['PPV'] = var_df['PPV'] * fx_rate
     var_df['Volume_Variance'] = var_df['Volume_Variance'] * fx_rate
     var_df['Total_Variance'] = var_df['Total_Variance'] * fx_rate
-except:
+except Exception as e:
+    st.error(f"Variance Engine Error: {e}")
     var_df = pd.DataFrame()
     ledger_df = pd.DataFrame()
 
@@ -438,7 +446,8 @@ try:
         
     recent_month_data = efficiency_df.iloc[-1]
     recent_labor_ratio = recent_month_data['Labor_Cost_Ratio']
-except:
+except Exception as e:
+    st.error(f"OpEx Engine Error: {e}")
     recent_labor_ratio = 0
     recent_month_data = {}
     opex_df = pd.DataFrame()
@@ -446,9 +455,9 @@ except:
 
 # Tax Engine Variables
 try:
-    region_code = curr_code[:2]
     tax_results = calculate_taxes(total_gross_revenue, total_cogs, total_opex, region_code)
-except:
+except Exception as e:
+    st.error(f"Tax Engine Error: {e}")
     tax_results = None
 
 with tab0:

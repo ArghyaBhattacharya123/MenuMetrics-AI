@@ -1,6 +1,7 @@
 # 📊 MenuMetrics-AI (Enterprise Financial Cockpit)
 
 🔥 **Live Web Demo:** [Play Here](https://menumetrics-ai.onrender.com)
+> **Note:** The live demo is hosted on a free Render tier. If it hasn't been visited in 15 minutes, it will spin down to save resources. **It may take 30-60 seconds to wake up** on your first visit. Please be patient!
 
 ## 🚀 Overview
 MenuMetrics-AI is an enterprise-grade, one-stop financial operating system built for modern businesses. It empowers business owners and executives to bypass traditional spreadsheets by offering real-time financial intelligence, machine learning-powered price optimization, and deep inventory analytics.
