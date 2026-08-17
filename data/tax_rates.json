@@ -1,0 +1,4 @@
+{
+    "US": {"transaction_tax_pct": 8.0, "corporate_tax_pct": 21.0},
+    "IN": {"transaction_tax_pct": 18.0, "corporate_tax_pct": 25.0}
+}

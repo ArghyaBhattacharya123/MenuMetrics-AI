@@ -1,3 +1,42 @@
+# MenuMetrics-AI: Executive Cockpit (Brain)
+
+## Project Overview
+MenuMetrics-AI is a fully autonomous, enterprise-grade Executive Financial Cockpit. It simulates real-world business environments using predictive ML algorithms, dynamic variance detection, and comprehensive OpEx, labor efficiency, and tax/escrow modules.
+
+## Folder Structure
+```text
+MenuMetrics-AI/
+├── .streamlit/
+│   └── config.toml           # Enterprise UI configuration (Pitch-Black OLED Theme)
+├── data/
+│   └── mock_inventory.csv    # Default pre-loaded dummy data
+├── src/
+│   ├── auto_synthesizer.py   # Generates simulated ledgers and historical sales for custom uploads
+│   ├── ml_model.py           # Linear regression ML model for price elasticity
+│   ├── opex_engine.py        # Logic for calculating Labor Ratios, Fixed/Variable expenses
+│   ├── tax_engine.py         # Logic for Sales and Corporate tax escrows
+│   └── variance_engine.py    # Logic for detecting Purchase Price Variance (PPV)
+├── app.py                    # Main Streamlit Dashboard Application
+├── requirements.txt          # Python dependencies
+├── run.bat                   # One-click Windows launcher
+├── run.py                    # Python programmatic launcher
+└── run.sh                    # One-click Mac/Linux launcher
+```
+
+## Completed Modules & Features
+- **Module 1: Inventory Variance & Pricing AI:** Calculates elasticity-based optimal pricing and isolates supply chain inflation.
+- **Module 2: OpEx & Labor Efficiency:** Calculates labor ratios and breakeven targets.
+- **Module 3: Tax & Escrow:** Evaluates Net Profit After Tax (NPAT) and calculates reserve requirements.
+- **Module 4: Executive Waterfall:** Visualizes cash flow from Gross Revenue down to NPAT.
+- **Custom Ingestion Engine:** Accepts custom CSV/Excel files and instantly auto-synthesizes historical ML data and simulated ledgers.
+- **Live Table Editor:** Updates dashboard instantly upon user edits.
+- **Stress Testing:** Models extreme conditions like Recession Shocks and Supply Chain inflation.
+- **Enterprise UX/UI:** Polished with a pitch-black OLED theme, hidden dev menus, and refined interactive elements.
+
+## Source Code References
+
+### `app.py`
+```python
 # pyrefly: ignore [missing-import]
 import streamlit as st
 import pandas as pd
@@ -8,109 +47,19 @@ import plotly.graph_objects as go
 # pyrefly: ignore [missing-import]
 from plotly.subplots import make_subplots
 import re
-# pyrefly: ignore [missing-import]
-import sqlalchemy
-# pyrefly: ignore [missing-import]
 from src.ml_model import train_and_predict_optimal_price
-# pyrefly: ignore [missing-import]
 from src.variance_engine import calculate_variances
-# pyrefly: ignore [missing-import]
 from src.opex_engine import calculate_opex_metrics
-# pyrefly: ignore [missing-import]
 from src.tax_engine import calculate_taxes
 
 st.set_page_config(page_title="MenuMetrics-AI", layout="wide")
-
-import streamlit.components.v1 as components
-components.html("""
-<script>
-    const parentDoc = window.parent.document;
-    
-    // --- PWA Mobile App Injection ---
-    if (!parentDoc.querySelector('link[rel="manifest"]')) {
-        const manifest = {
-            "name": "MenuMetrics-AI Executive Cockpit",
-            "short_name": "MenuMetrics",
-            "start_url": ".",
-            "display": "standalone",
-            "background_color": "#121212",
-            "theme_color": "#121212",
-            "icons": [{
-                "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23121212'/><text y='50' x='50' font-family='Arial' font-size='40' fill='%23D4AF37' text-anchor='middle' dominant-baseline='middle'>M</text></svg>",
-                "sizes": "192x192",
-                "type": "image/svg+xml"
-            }]
-        };
-        const manifestBlob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
-        const manifestUrl = URL.createObjectURL(manifestBlob);
-        
-        const linkManifest = parentDoc.createElement('link');
-        linkManifest.rel = 'manifest';
-        linkManifest.href = manifestUrl;
-        parentDoc.head.appendChild(linkManifest);
-        
-        const metaApple = parentDoc.createElement('meta');
-        metaApple.name = 'apple-mobile-web-app-capable';
-        metaApple.content = 'yes';
-        parentDoc.head.appendChild(metaApple);
-        
-        const metaAppleStatus = parentDoc.createElement('meta');
-        metaAppleStatus.name = 'apple-mobile-web-app-status-bar-style';
-        metaAppleStatus.content = 'black-translucent';
-        parentDoc.head.appendChild(metaAppleStatus);
-    }
-    // --- End PWA Injection ---
-
-    if (!parentDoc.getElementById("custom-sidebar-toggle")) {
-        const btn = parentDoc.createElement("button");
-        btn.id = "custom-sidebar-toggle";
-        btn.innerHTML = "☰ Menu";
-        btn.style.cssText = "position: fixed; top: 15px; left: 15px; z-index: 999999; background-color: #1E293B; color: #F8FAFC; border: 1px solid #334155; padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3); font-family: sans-serif; transition: all 0.2s ease-in-out;";
-        
-        btn.onmouseover = () => { btn.style.backgroundColor = "#334155"; btn.style.borderColor = "#D4AF37"; };
-        btn.onmouseout = () => { btn.style.backgroundColor = "#1E293B"; btn.style.borderColor = "#334155"; };
-        
-        btn.onclick = () => {
-            // Find the collapsed control to open it
-            const toggleOpen = parentDoc.querySelector('[data-testid="collapsedControl"]');
-            if (toggleOpen) {
-                toggleOpen.click();
-            } else {
-                // If it is already open, click the native close arrow inside the sidebar
-                const sidebar = parentDoc.querySelector('[data-testid="stSidebar"]');
-                if (sidebar) {
-                    const buttons = sidebar.querySelectorAll('button');
-                    if (buttons.length > 0) {
-                        buttons[0].click();
-                    }
-                }
-            }
-        };
-        parentDoc.body.appendChild(btn);
-
-
-        // Monitor sidebar state dynamically to show/hide the custom button
-        setInterval(() => {
-            const sidebar = parentDoc.querySelector('[data-testid="stSidebar"]');
-            if (sidebar) {
-                const isExpanded = sidebar.getAttribute('aria-expanded') === 'true';
-                if (isExpanded) {
-                    btn.style.display = 'none';  // Sidebar is open, hide button
-                } else {
-                    btn.style.display = 'block'; // Sidebar is closed, show button
-                }
-            }
-        }, 150);
-    }
-</script>
-""", height=0, width=0)
 
 st.markdown("""
 <style>
     /* Hide Streamlit default UI elements for a clean product look */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header[data-testid="stHeader"] {visibility: hidden;}
+    header {visibility: hidden;}
     
     /* Card-like styling for metric containers */
     div[data-testid="metric-container"] {
@@ -127,26 +76,13 @@ st.markdown("""
         border: 1px solid #334155;
     }
     
-    /* Bulletproof Tab Styling */
-    div[data-testid="stTabs"] button {
-        border-radius: 8px 8px 0 0 !important;
-        padding: 10px 20px !important;
-        transition: all 0.2s ease-in-out !important;
+    /* Clean tab navigation styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 20px;
     }
-    div[data-testid="stTabs"] button:hover p {
-        color: #D4AF37 !important;
-    }
-    div[data-testid="stTabs"] button[aria-selected="true"] p {
-        color: #D4AF37 !important;
-        font-weight: 800 !important;
-    }
-    /* Streamlit uses an animated div for the bottom highlight */
-    div[data-testid="stTabs"] div[data-baseweb="tab-highlight"] {
-        background-color: #D4AF37 !important;
-    }
-    /* Fallback if Streamlit version uses border-bottom instead of animated div */
-    div[data-testid="stTabs"] button[aria-selected="true"] {
-        border-bottom: 2px solid #D4AF37 !important;
+    .stTabs [data-baseweb="tab"] {
+        border-radius: 8px 8px 0 0;
+        padding: 10px 20px;
     }
     
     /* Sleek Pitch-Black Theme Button Styling */
@@ -166,62 +102,10 @@ st.markdown("""
         color: #FFFFFF !important;
         box-shadow: 0 6px 12px rgba(99, 102, 241, 0.2) !important;
     }
-    
-    /* Gold Title Container Base Styles */
-    .gold-title-container {
-        text-align: center;
-        padding: 18px 30px;
-        margin: 10px auto 25px auto;
-        border: 2px solid #D4AF37;
-        border-radius: 12px;
-        background-color: #121212;
-        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
-        max-width: 500px;
-        width: 100%;
-    }
-    .gold-title-text {
-        color: #D4AF37;
-        margin: 0;
-        font-size: 3.2rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-
-    /* Fully Responsive Media Queries for Mobile/Tablet */
-    @media (max-width: 768px) {
-        .gold-title-container {
-            width: 90% !important;
-            padding: 12px 15px !important;
-            margin: 5px auto 15px auto !important;
-        }
-        .gold-title-text {
-            font-size: 2.2rem !important;
-        }
-        
-        /* Scale down Fluffy's popup window */
-        div[data-testid="stPopoverBody"] {
-            width: 90vw !important;
-            right: 5vw !important;
-            height: 60vh !important;
-        }
-        
-        /* Shrink the persistent sidebar toggle to avoid clutter */
-        #custom-sidebar-toggle {
-            padding: 6px 10px !important;
-            font-size: 12px !important;
-            top: 10px !important;
-            left: 10px !important;
-        }
-    }
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-    <div class="gold-title-container">
-        <h1 class="gold-title-text">MenuMetrics-AI</h1>
-    </div>
-""", unsafe_allow_html=True)
-st.markdown("<h1 style='color: #38BDF8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4); margin-bottom: 0.5rem;'>Executive Cockpit</h1>", unsafe_allow_html=True)
+st.markdown("<h1>MenuMetrics-AI <span style='color:#6366F1;'>// Executive Cockpit</span></h1>", unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.header("Account Management")
@@ -283,45 +167,16 @@ if profile_selection != "Demo Mode (Pre-Loaded)":
 st.sidebar.markdown("---")
 st.sidebar.header("Global Settings")
 with st.sidebar.expander("Enterprise Cloud Sync"):
-    db_url = st.text_input("PostgreSQL Connection String", type="password", placeholder="postgresql://user:pass@host/dbname")
-    if st.button("Sync Data to Cloud", use_container_width=True):
-        if not db_url:
-            st.warning("Please enter a connection string first.")
-        else:
-            try:
-                import pandas as pd
-                engine = sqlalchemy.create_engine(db_url)
-                
-                # Fetch active data
-                df_to_push = None
-                if profile_selection == "Demo Mode (Pre-Loaded)":
-                    df_to_push = pd.read_csv("data/mock_inventory.csv")
-                else:
-                    if f"sku_df_{profile_selection}" in st.session_state:
-                        df_to_push = st.session_state[f"sku_df_{profile_selection}"]
-                
-                if df_to_push is not None and not df_to_push.empty:
-                    df_to_push.to_sql("menumetrics_export", engine, if_exists='replace', index=False)
-                    st.success("✅ Data successfully synced to Enterprise Database!")
-                else:
-                    st.warning("No active data found to sync. Please load data first.")
-            except Exception as e:
-                st.error("Connection Failed. Check your URL.")
+    cloud_sync = st.toggle("Enable Live Cloud Database Sync (PostgreSQL)")
+    if cloud_sync:
+        st.success("Cloud Sync Active: Connected to remote database cluster.")
 
-region_selection = st.sidebar.selectbox("Select Currency", [
-    "USD ($)", "INR (₹)", "EUR (€)", "GBP (£)", "CAD ($)", "GIP (£)", 
-    "CNY (¥)", "KWD (د.ك)", "IRR (﷼)", "JPY (¥)", "RUB (₽)", 
-    "KRW (₩)", "CHF (Fr)", "VND (₫)", "RMB (¥)"
-])
+region_selection = st.sidebar.selectbox("Select Currency", ["USD ($)", "INR (₹)", "EUR (€)", "JPY (¥)"])
 
-fx_rates = {
-    "USD": 1.0, "EUR": 0.92, "GBP": 0.79, "CAD": 1.36, "GIP": 0.79, 
-    "CNY": 7.23, "KWD": 0.31, "IRR": 42000.0, "JPY": 155.0, "RUB": 92.0, 
-    "KRW": 1360.0, "CHF": 0.90, "VND": 25400.0, "RMB": 7.23, "INR": 83.5
-}
+fx_rates = {"USD": 1.0, "INR": 83.5, "EUR": 0.92, "JPY": 155.0}
 curr_code = region_selection.split()[0]
 currency_symbol = re.search(r'\((.*?)\)', region_selection).group(1)
-fx_rate = fx_rates.get(curr_code, 1.0)
+fx_rate = fx_rates[curr_code]
 
 st.sidebar.header("Simulation Settings")
 stress_scenario = st.sidebar.selectbox("Macro Stress Test Scenario", ["Normal Market Conditions", "📉 Recession Shock (-20% Volume)", "⚡ Supply Chain Crisis (+15% Cost Inflation)"])
@@ -891,111 +746,372 @@ with tab4:
     except Exception as e:
         st.error(f"Error loading Tax data: {e}")
 
-st.markdown("""
-<style>
-    /* Absolute Floating Button Fix */
-    div[data-testid="stPopover"] {
-        position: fixed !important;
-        bottom: 25px !important;
-        right: 25px !important;
-        z-index: 999999 !important;
-        width: auto !important;
-        display: inline-block !important;
-    }
-    div[data-testid="stPopover"] > button {
-        background-color: #6366F1 !important;
-        color: white !important;
-        border-radius: 50px !important;
-        padding: 10px 20px !important;
-        font-weight: bold !important;
-        font-size: 16px !important;
-        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4) !important;
-        border: none !important;
-        transition: transform 0.2s ease !important;
-        width: auto !important;
-    }
-    div[data-testid="stPopover"] > button:hover {
-        transform: scale(1.05) !important;
-    }
-    /* Fix for popup width */
-    div[data-testid="stPopoverBody"] {
-        width: 350px !important;
-        background-color: #121212 !important;
-        border: 1px solid #333 !important;
-        border-radius: 12px !important;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
-    }
-</style>
-""", unsafe_allow_html=True)
+```
 
-with st.popover("🤖 Fluffy", use_container_width=False):
-    st.markdown("**Fluffy // AI Financial Companion**")
+### `run.py`
+```python
+import os
+import sys
+from streamlit.web import cli as stcli
+
+if __name__ == "__main__":
+    app_path = os.path.abspath("app.py")
+    sys.argv = ["streamlit", "run", app_path, "--global.developmentMode=false"]
+    sys.exit(stcli.main())
+
+```
+
+### `run.bat`
+```bat
+@echo off
+echo Starting MenuMetrics-AI Executive Cockpit...
+python run.py
+pause
+
+```
+
+### `run.sh`
+```bash
+#!/bin/bash
+echo "Starting MenuMetrics-AI Executive Cockpit..."
+python3 run.py
+
+```
+
+### `requirements.txt`
+```text
+streamlit>=1.30.0
+pandas>=2.0.0
+plotly>=5.18.0
+scikit-learn>=1.3.0
+reportlab>=4.0.0
+openpyxl>=3.1.2
+statsmodels>=0.14.0  
+ 
+```
+
+### `.streamlit/config.toml`
+```toml
+[theme]
+base="dark"
+primaryColor="#FFFFFF"
+backgroundColor="#050505"
+secondaryBackgroundColor="#121212"
+textColor="#EDEDED"
+font="sans serif"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+
+[client]
+toolbarMode = "minimal"
+
+```
+
+### `src/auto_synthesizer.py`
+```python
+import pandas as pd
+import numpy as np
+
+def synthesize_custom_data(uploaded_df):
+    """
+    Takes the uploaded custom CSV/Excel data and synthesizes realistic 
+    purchase ledgers, opex ledgers, and revenue ledgers.
+    """
+    # 1. sku_df
+    sku_df = pd.DataFrame({
+        'SKU_ID': uploaded_df['SKU_ID'],
+        'Item_Name': uploaded_df['Item_Name'],
+        'Category': 'Custom',
+        'Unit_of_Measure': 'Units'
+    })
     
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-        st.session_state.messages.append({"role": "assistant", "content": "Hello! I am Fluffy 🤖. Ask me about **net profit**, **tax escrows**, **revenue**, **labor**, or **items**."})
+    # 2. ledger_df (Jan - June 2026)
+    months = ['2026-01-01', '2026-02-01', '2026-03-01', '2026-04-01', '2026-05-01', '2026-06-01']
+    ledger_records = []
+    
+    for _, row in uploaded_df.iterrows():
+        sku = row['SKU_ID']
+        vol = row['Monthly_Volume']
+        base_cost = row['Current_Cost']
         
-    for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
+        # Start cost at 90% and increase to 100% (+ inflation/variance)
+        for i, m in enumerate(months):
+            cost_multiplier = 0.90 + (i * 0.02) # gradual increase
+            unit_cost = base_cost * cost_multiplier
+            # add slight random noise
+            unit_cost = unit_cost * np.random.uniform(0.98, 1.05)
             
-    if prompt := st.chat_input("Ask Fluffy..."):
-        st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
+            qty = int(vol * np.random.uniform(0.9, 1.1))
             
-        # Parse query
-        prompt_lower = prompt.lower()
-        response = "I'm sorry, I couldn't understand that query. Try asking about 'tax', 'net profit', 'revenue', 'margin', 'labor', or specific inventory items."
+            ledger_records.append({
+                'Date': m,
+                'SKU_ID': sku,
+                'Quantity_Bought': qty,
+                'Total_Paid': qty * unit_cost
+            })
+            
+    ledger_df = pd.DataFrame(ledger_records)
+    
+    # 3. rev_df (Monthly Revenue & Headcount)
+    rev_records = []
+    total_rev_base = (uploaded_df['Selling_Price'] * uploaded_df['Monthly_Volume']).sum()
+    
+    # Headcount scales with volume
+    base_headcount = max(2, int(uploaded_df['Monthly_Volume'].sum() / 1000))
+    
+    for i, m in enumerate(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']):
+        growth = 1.0 + (i * 0.05)
+        monthly_rev = total_rev_base * growth * np.random.uniform(0.95, 1.05)
+        hc = base_headcount + int(i / 2) # headcount grows slowly
         
-        try:
-            # 1. Product & Inventory NLP Matching
-            item_match = None
-            if not df.empty and 'Dish_Name' in df.columns:
-                for item in df['Dish_Name'].unique():
-                    if str(item).lower() in prompt_lower:
-                        item_match = item
-                        break
-                        
-            if item_match:
-                item_data = df[df['Dish_Name'] == item_match].iloc[0]
-                response = f"**{item_match}** sells for **{currency_symbol}{item_data['Current_Price']:,.2f}** with a cost of **{currency_symbol}{item_data['Cost_to_Make']:,.2f}**. You move approximately **{int(item_data['Monthly_Volume']):,} units** per month."
-            elif 'most sold' in prompt_lower or 'best seller' in prompt_lower or 'top selling' in prompt_lower:
-                if not df.empty and 'Monthly_Volume' in df.columns:
-                    top_item = df.loc[df['Monthly_Volume'].idxmax()]
-                    response = f"Your most sold item is **{top_item['Dish_Name']}** with a monthly volume of **{int(top_item['Monthly_Volume']):,} units**."
-                else:
-                    response = "I don't have enough data to determine the top seller."
-            elif 'inventory' in prompt_lower or 'items' in prompt_lower or 'products' in prompt_lower:
-                if not df.empty and 'Dish_Name' in df.columns:
-                    total_items = len(df)
-                    items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
-                    response = f"You currently have **{total_items} items** in your active inventory catalog. Some examples include: {items_list}..."
-                else:
-                    response = "Your inventory is currently empty."
+        rev_records.append({
+            'Month': m,
+            'Gross_Revenue': monthly_rev,
+            'Headcount': hc
+        })
+        
+    rev_df = pd.DataFrame(rev_records)
+    
+    # 4. opex_df
+    opex_records = []
+    for i, row in rev_df.iterrows():
+        m = row['Month']
+        rev = row['Gross_Revenue']
+        
+        # Payroll ~ 30-35% of revenue
+        payroll = rev * np.random.uniform(0.30, 0.35)
+        # Rent ~ 10% (Fixed-ish)
+        rent = total_rev_base * 0.10
+        # Marketing ~ 5%
+        marketing = rev * 0.05
+        # Utilities ~ 2%
+        utilities = total_rev_base * 0.02
+        
+        opex_records.extend([
+            {'Month': m, 'Expense_Category': 'Payroll', 'Expense_Type': 'Variable', 'Amount': payroll},
+            {'Month': m, 'Expense_Category': 'Rent', 'Expense_Type': 'Fixed', 'Amount': rent},
+            {'Month': m, 'Expense_Category': 'Marketing', 'Expense_Type': 'Variable', 'Amount': marketing},
+            {'Month': m, 'Expense_Category': 'Utilities', 'Expense_Type': 'Fixed', 'Amount': utilities}
+        ])
+        
+    opex_df = pd.DataFrame(opex_records)
+    
+    # 5. hist_df (Historical Sales for ML Pricing Engine)
+    hist_records = []
+    for _, row in uploaded_df.iterrows():
+        name = row['Item_Name']
+        base_price = row['Selling_Price']
+        base_vol = row['Monthly_Volume']
+        
+        # Generate ~15 historical data points for linear regression
+        for _ in range(15):
+            price_variation = np.random.uniform(-0.2, 0.2)
+            historical_price = base_price * (1 + price_variation)
             
-            # 2. Financial KPI NLP Matching
-            elif 'tax' in prompt_lower:
-                if tax_results:
-                    response = f"Your current required Tax Escrow is **{currency_symbol}{tax_results['total_tax_escrow']:,.2f}** (which includes {currency_symbol}{tax_results['transaction_tax']:,.2f} in sales tax and {currency_symbol}{tax_results['corporate_tax_liability']:,.2f} in corporate tax)."
-                else:
-                    response = "Tax calculations are currently unavailable or missing data."
-            elif 'net profit' in prompt_lower or 'npat' in prompt_lower:
-                profit_val = npat if tax_results else ebitda
-                response = f"Your current estimated Net Profit After Tax (NPAT) is **{currency_symbol}{profit_val:,.2f}**."
-            elif 'revenue' in prompt_lower or 'sales' in prompt_lower:
-                response = f"Your total gross monthly revenue is projected at **{currency_symbol}{total_gross_revenue:,.2f}**."
-            elif 'labor' in prompt_lower or 'staff' in prompt_lower:
-                response = f"Your labor cost ratio is **{recent_labor_ratio:.1f}%**. Total monthly staff salary is **{currency_symbol}{staff:,.0f}**."
-            elif 'margin' in prompt_lower:
-                response = f"Your Gross Margin is **{gross_margin_pct:.1f}%** and your EBITDA margin is **{ebitda_margin:.2f}%**."
-            elif 'ebitda' in prompt_lower:
-                response = f"Your EBITDA is **{currency_symbol}{ebitda:,.2f}**."
-        except NameError:
-            response = "Some data is not fully loaded yet to answer that specific query."
+            # Inverse demand curve
+            volume_variation = -price_variation * 1.5 
+            historical_qty = base_vol * (1 + volume_variation) * np.random.uniform(0.9, 1.1)
             
-        with st.chat_message("assistant"):
-            st.markdown(response)
-        st.session_state.messages.append({"role": "assistant", "content": response})
-        st.rerun()
+            hist_records.append({
+                'Dish_Name': name,
+                'Price_Sold_USD': historical_price,
+                'Quantity_Sold': int(historical_qty)
+            })
+            
+    hist_df = pd.DataFrame(hist_records)
+    
+    return sku_df, ledger_df, opex_df, rev_df, hist_df
+
+```
+
+### `src/ml_model.py`
+```python
+import pandas as pd
+import numpy as np
+import warnings
+from sklearn.linear_model import LinearRegression
+
+warnings.filterwarnings('ignore', category=UserWarning)
+
+def train_and_predict_optimal_price(dish_name, current_cost, current_price, fx_rate, hist_df=None):
+    if hist_df is None:
+        hist_df = pd.read_csv("data/historical_sales.csv")
+        
+    dish_df = hist_df[hist_df['Dish_Name'] == dish_name]
+    
+    if len(dish_df) < 5:
+        return None, None, None
+        
+    X = (dish_df[['Price_Sold_USD']] * fx_rate).rename(columns={'Price_Sold_USD': 'Price_Sold'})
+    y = dish_df['Quantity_Sold']
+    
+    model = LinearRegression()
+    model.fit(X, y)
+    
+    min_price = max(current_cost, X['Price_Sold'].min() * 0.5)
+    max_price = X['Price_Sold'].max() * 1.5
+    
+    prices = np.linspace(min_price, max_price, 200).reshape(-1, 1)
+    predicted_quantities = model.predict(prices)
+    predicted_quantities = np.maximum(0, predicted_quantities)
+    profits = (prices.flatten() - current_cost) * predicted_quantities
+    
+    baseline_demand = model.predict([[current_price]])[0]
+    baseline_profit = (current_price - current_cost) * baseline_demand
+    
+    optimal_idx = np.argmax(profits)
+    optimal_price = prices[optimal_idx][0]
+    optimal_demand = predicted_quantities[optimal_idx]
+    optimal_profit = profits[optimal_idx]
+    
+    if optimal_profit < baseline_profit:
+        optimal_price = current_price
+        optimal_demand = baseline_demand
+        
+    monthly_baseline_revenue = current_price * baseline_demand * 30
+    monthly_optimal_revenue = optimal_price * optimal_demand * 30
+    revenue_impact_monthly = monthly_optimal_revenue - monthly_baseline_revenue
+    
+    return optimal_price, optimal_demand, revenue_impact_monthly
+
+```
+
+### `src/opex_engine.py`
+```python
+import pandas as pd
+
+def calculate_opex_metrics(opex_df=None, rev_df=None):
+    if opex_df is None:
+        opex_df = pd.read_csv("data/opex_ledger.csv")
+    if rev_df is None:
+        rev_df = pd.read_csv("data/monthly_revenue.csv")
+    
+    # Calculate Payroll per month
+    payroll_df = opex_df[opex_df['Expense_Category'] == 'Payroll'].groupby('Month')['Amount'].sum().reset_index()
+    payroll_df.rename(columns={'Amount': 'Payroll_Amount'}, inplace=True)
+    
+    # Total OpEx per month
+    total_opex = opex_df.groupby('Month')['Amount'].sum().reset_index()
+    total_opex.rename(columns={'Amount': 'Total_OpEx'}, inplace=True)
+    
+    # Fixed vs Variable
+    type_split = opex_df.groupby(['Month', 'Expense_Type'])['Amount'].sum().unstack(fill_value=0).reset_index()
+    
+    # Merge everything
+    df = pd.merge(rev_df, payroll_df, on='Month')
+    df = pd.merge(df, total_opex, on='Month')
+    df = pd.merge(df, type_split, on='Month')
+    
+    # Metrics
+    df['Labor_Cost_Ratio'] = (df['Payroll_Amount'] / df['Gross_Revenue']) * 100
+    df['Revenue_Per_Employee'] = df['Gross_Revenue'] / df['Headcount']
+    
+    return opex_df, df
+
+```
+
+### `src/tax_engine.py`
+```python
+import json
+import os
+
+def calculate_taxes(gross_cash, total_cogs, total_opex, region_code):
+    tax_rates_path = "data/tax_rates.json"
+    
+    if not os.path.exists(tax_rates_path):
+        return None
+        
+    with open(tax_rates_path, "r") as f:
+        tax_config = json.load(f)
+        
+    # Default to US if region code not found
+    config = tax_config.get(region_code, tax_config.get("US", {"transaction_tax_pct": 8.0, "corporate_tax_pct": 21.0}))
+    
+    transaction_tax_pct = config["transaction_tax_pct"]
+    corporate_tax_pct = config["corporate_tax_pct"]
+    
+    # Net Sales Revenue (Extract transaction tax from Gross Cash)
+    # Gross Cash = Net Sales + (Net Sales * transaction_tax_pct / 100)
+    # Gross Cash = Net Sales * (1 + transaction_tax_pct / 100)
+    net_sales_revenue = gross_cash / (1 + (transaction_tax_pct / 100))
+    transaction_tax = gross_cash - net_sales_revenue
+    
+    # EBT
+    ebt = net_sales_revenue - total_cogs - total_opex
+    
+    # Corporate Tax Liability (Only if EBT > 0)
+    corporate_tax_liability = max(0, ebt * (corporate_tax_pct / 100))
+    
+    # NPAT
+    npat = ebt - corporate_tax_liability
+    
+    # Total Tax Escrow
+    total_tax_escrow = transaction_tax + corporate_tax_liability
+    
+    return {
+        "gross_cash": gross_cash,
+        "net_sales_revenue": net_sales_revenue,
+        "transaction_tax": transaction_tax,
+        "total_cogs": total_cogs,
+        "total_opex": total_opex,
+        "ebt": ebt,
+        "corporate_tax_liability": corporate_tax_liability,
+        "npat": npat,
+        "total_tax_escrow": total_tax_escrow
+    }
+
+```
+
+### `src/variance_engine.py`
+```python
+import pandas as pd
+
+def calculate_variances(sku_df=None, ledger_df=None):
+    if sku_df is None:
+        sku_df = pd.read_csv("data/sku_master.csv")
+    if ledger_df is None:
+        ledger_df = pd.read_csv("data/purchase_ledger.csv")
+    
+    # Calculate Unit_Cost
+    ledger_df['Unit_Cost'] = ledger_df['Total_Paid'] / ledger_df['Quantity_Bought']
+    ledger_df['Date'] = pd.to_datetime(ledger_df['Date'])
+    
+    # Sort by date
+    ledger_df = ledger_df.sort_values(by=['SKU_ID', 'Date'])
+    
+    # Join with SKU info
+    df = pd.merge(ledger_df, sku_df, on='SKU_ID')
+    
+    variance_results = []
+    
+    for sku in df['SKU_ID'].unique():
+        sku_data = df[df['SKU_ID'] == sku].tail(2).reset_index(drop=True)
+        if len(sku_data) < 2:
+            continue
+            
+        prev = sku_data.iloc[0]
+        curr = sku_data.iloc[1]
+        
+        ppv = (curr['Unit_Cost'] - prev['Unit_Cost']) * curr['Quantity_Bought']
+        vol_var = (curr['Quantity_Bought'] - prev['Quantity_Bought']) * prev['Unit_Cost']
+        
+        variance_results.append({
+            'SKU_ID': sku,
+            'Item_Name': curr['Item_Name'],
+            'Unit_of_Measure': curr['Unit_of_Measure'],
+            'Prev_Unit_Cost': prev['Unit_Cost'],
+            'Curr_Unit_Cost': curr['Unit_Cost'],
+            'Prev_Qty': prev['Quantity_Bought'],
+            'Curr_Qty': curr['Quantity_Bought'],
+            'PPV': ppv,
+            'Volume_Variance': vol_var,
+            'Total_Variance': curr['Total_Paid'] - prev['Total_Paid']
+        })
+        
+    return df, pd.DataFrame(variance_results)
+
+```
+

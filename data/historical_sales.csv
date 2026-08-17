@@ -1,501 +1,501 @@
-Date,Dish_Name,Price_Sold,Quantity_Sold,Cost
-2026-05-09,Truffle Pasta,21.72,25,8.5
-2026-05-09,Wagyu Burger,30.78,1,12.0
-2026-05-09,Margherita Pizza,16.37,10,4.0
-2026-05-09,Lobster Bisque,15.75,39,7.5
-2026-05-09,Vegan Quinoa Bowl,17.4,35,5.0
-2026-05-10,Truffle Pasta,25.39,1,8.5
-2026-05-10,Wagyu Burger,23.19,95,12.0
-2026-05-10,Margherita Pizza,19.46,1,4.0
-2026-05-10,Lobster Bisque,15.21,38,7.5
-2026-05-10,Vegan Quinoa Bowl,19.96,1,5.0
-2026-05-11,Truffle Pasta,17.68,67,8.5
-2026-05-11,Wagyu Burger,26.48,40,12.0
-2026-05-11,Margherita Pizza,15.86,23,4.0
-2026-05-11,Lobster Bisque,20.83,8,7.5
-2026-05-11,Vegan Quinoa Bowl,22.14,1,5.0
-2026-05-12,Truffle Pasta,19.48,47,8.5
-2026-05-12,Wagyu Burger,22.59,105,12.0
-2026-05-12,Margherita Pizza,20.53,1,4.0
-2026-05-12,Lobster Bisque,18.86,20,7.5
-2026-05-12,Vegan Quinoa Bowl,16.48,52,5.0
-2026-05-13,Truffle Pasta,24.31,1,8.5
-2026-05-13,Wagyu Burger,22.88,92,12.0
-2026-05-13,Margherita Pizza,14.87,56,4.0
-2026-05-13,Lobster Bisque,22.38,4,7.5
-2026-05-13,Vegan Quinoa Bowl,16.27,53,5.0
-2026-05-14,Truffle Pasta,19.63,40,8.5
-2026-05-14,Wagyu Burger,33.25,1,12.0
-2026-05-14,Margherita Pizza,15.96,20,4.0
-2026-05-14,Lobster Bisque,20.88,13,7.5
-2026-05-14,Vegan Quinoa Bowl,19.53,1,5.0
-2026-05-15,Truffle Pasta,28.17,1,8.5
-2026-05-15,Wagyu Burger,27.84,19,12.0
-2026-05-15,Margherita Pizza,17.12,1,4.0
-2026-05-15,Lobster Bisque,18.59,26,7.5
-2026-05-15,Vegan Quinoa Bowl,17.07,34,5.0
-2026-05-16,Truffle Pasta,17.77,66,8.5
-2026-05-16,Wagyu Burger,33.21,1,12.0
-2026-05-16,Margherita Pizza,12.84,112,4.0
-2026-05-16,Lobster Bisque,21.92,3,7.5
-2026-05-16,Vegan Quinoa Bowl,21.51,1,5.0
-2026-05-17,Truffle Pasta,27.79,1,8.5
-2026-05-17,Wagyu Burger,35.21,1,12.0
-2026-05-17,Margherita Pizza,17.79,1,4.0
-2026-05-17,Lobster Bisque,16.11,36,7.5
-2026-05-17,Vegan Quinoa Bowl,17.2,39,5.0
-2026-05-18,Truffle Pasta,24.93,1,8.5
-2026-05-18,Wagyu Burger,26.25,44,12.0
-2026-05-18,Margherita Pizza,16.58,2,4.0
-2026-05-18,Lobster Bisque,24.43,1,7.5
-2026-05-18,Vegan Quinoa Bowl,21.25,1,5.0
-2026-05-19,Truffle Pasta,26.08,1,8.5
-2026-05-19,Wagyu Burger,22.97,93,12.0
-2026-05-19,Margherita Pizza,13.05,110,4.0
-2026-05-19,Lobster Bisque,19.72,15,7.5
-2026-05-19,Vegan Quinoa Bowl,22.57,1,5.0
-2026-05-20,Truffle Pasta,24.25,1,8.5
-2026-05-20,Wagyu Burger,35.6,1,12.0
-2026-05-20,Margherita Pizza,15.12,47,4.0
-2026-05-20,Lobster Bisque,23.56,2,7.5
-2026-05-20,Vegan Quinoa Bowl,15.35,72,5.0
-2026-05-21,Truffle Pasta,27.42,1,8.5
-2026-05-21,Wagyu Burger,34.95,1,12.0
-2026-05-21,Margherita Pizza,20.05,1,4.0
-2026-05-21,Lobster Bisque,17.37,32,7.5
-2026-05-21,Vegan Quinoa Bowl,21.76,1,5.0
-2026-05-22,Truffle Pasta,20.95,31,8.5
-2026-05-22,Wagyu Burger,29.55,1,12.0
-2026-05-22,Margherita Pizza,16.68,1,4.0
-2026-05-22,Lobster Bisque,16.34,36,7.5
-2026-05-22,Vegan Quinoa Bowl,22.89,1,5.0
-2026-05-23,Truffle Pasta,20.01,42,8.5
-2026-05-23,Wagyu Burger,32.24,1,12.0
-2026-05-23,Margherita Pizza,13.32,99,4.0
-2026-05-23,Lobster Bisque,17.55,29,7.5
-2026-05-23,Vegan Quinoa Bowl,18.88,1,5.0
-2026-05-24,Truffle Pasta,19.23,50,8.5
-2026-05-24,Wagyu Burger,22.92,92,12.0
-2026-05-24,Margherita Pizza,20.61,1,4.0
-2026-05-24,Lobster Bisque,15.51,33,7.5
-2026-05-24,Vegan Quinoa Bowl,20.11,1,5.0
-2026-05-25,Truffle Pasta,23.44,6,8.5
-2026-05-25,Wagyu Burger,25.79,52,12.0
-2026-05-25,Margherita Pizza,13.45,99,4.0
-2026-05-25,Lobster Bisque,17.46,28,7.5
-2026-05-25,Vegan Quinoa Bowl,17.71,24,5.0
-2026-05-26,Truffle Pasta,28.42,1,8.5
-2026-05-26,Wagyu Burger,29.9,1,12.0
-2026-05-26,Margherita Pizza,14.01,80,4.0
-2026-05-26,Lobster Bisque,21.81,3,7.5
-2026-05-26,Vegan Quinoa Bowl,19.72,1,5.0
-2026-05-27,Truffle Pasta,17.78,60,8.5
-2026-05-27,Wagyu Burger,33.73,1,12.0
-2026-05-27,Margherita Pizza,17.96,1,4.0
-2026-05-27,Lobster Bisque,24.13,1,7.5
-2026-05-27,Vegan Quinoa Bowl,17.88,19,5.0
-2026-05-28,Truffle Pasta,26.81,1,8.5
-2026-05-28,Wagyu Burger,23.99,82,12.0
-2026-05-28,Margherita Pizza,17.13,1,4.0
-2026-05-28,Lobster Bisque,17.37,32,7.5
-2026-05-28,Vegan Quinoa Bowl,19.05,1,5.0
-2026-05-29,Truffle Pasta,20.26,37,8.5
-2026-05-29,Wagyu Burger,35.01,1,12.0
-2026-05-29,Margherita Pizza,15.51,32,4.0
-2026-05-29,Lobster Bisque,21.85,3,7.5
-2026-05-29,Vegan Quinoa Bowl,22.11,1,5.0
-2026-05-30,Truffle Pasta,26.18,1,8.5
-2026-05-30,Wagyu Burger,34.31,1,12.0
-2026-05-30,Margherita Pizza,14.09,78,4.0
-2026-05-30,Lobster Bisque,21.56,5,7.5
-2026-05-30,Vegan Quinoa Bowl,17.75,29,5.0
-2026-05-31,Truffle Pasta,24.9,1,8.5
-2026-05-31,Wagyu Burger,24.65,67,12.0
-2026-05-31,Margherita Pizza,16.68,1,4.0
-2026-05-31,Lobster Bisque,21.39,12,7.5
-2026-05-31,Vegan Quinoa Bowl,15.98,59,5.0
-2026-06-01,Truffle Pasta,20.21,37,8.5
-2026-06-01,Wagyu Burger,24.9,69,12.0
-2026-06-01,Margherita Pizza,18.0,1,4.0
-2026-06-01,Lobster Bisque,22.05,1,7.5
-2026-06-01,Vegan Quinoa Bowl,19.28,1,5.0
-2026-06-02,Truffle Pasta,24.6,1,8.5
-2026-06-02,Wagyu Burger,25.82,53,12.0
-2026-06-02,Margherita Pizza,20.63,1,4.0
-2026-06-02,Lobster Bisque,23.67,1,7.5
-2026-06-02,Vegan Quinoa Bowl,17.55,24,5.0
-2026-06-03,Truffle Pasta,23.95,1,8.5
-2026-06-03,Wagyu Burger,25.13,61,12.0
-2026-06-03,Margherita Pizza,17.38,1,4.0
-2026-06-03,Lobster Bisque,15.61,36,7.5
-2026-06-03,Vegan Quinoa Bowl,22.35,1,5.0
-2026-06-04,Truffle Pasta,28.08,1,8.5
-2026-06-04,Wagyu Burger,30.14,1,12.0
-2026-06-04,Margherita Pizza,20.64,1,4.0
-2026-06-04,Lobster Bisque,18.0,25,7.5
-2026-06-04,Vegan Quinoa Bowl,16.12,53,5.0
-2026-06-05,Truffle Pasta,21.09,26,8.5
-2026-06-05,Wagyu Burger,30.2,1,12.0
-2026-06-05,Margherita Pizza,18.37,1,4.0
-2026-06-05,Lobster Bisque,15.87,32,7.5
-2026-06-05,Vegan Quinoa Bowl,19.94,1,5.0
-2026-06-06,Truffle Pasta,21.55,21,8.5
-2026-06-06,Wagyu Burger,26.92,39,12.0
-2026-06-06,Margherita Pizza,18.38,1,4.0
-2026-06-06,Lobster Bisque,18.62,23,7.5
-2026-06-06,Vegan Quinoa Bowl,18.18,13,5.0
-2026-06-07,Truffle Pasta,27.14,1,8.5
-2026-06-07,Wagyu Burger,29.42,1,12.0
-2026-06-07,Margherita Pizza,18.0,1,4.0
-2026-06-07,Lobster Bisque,18.41,19,7.5
-2026-06-07,Vegan Quinoa Bowl,15.25,77,5.0
-2026-06-08,Truffle Pasta,24.99,1,8.5
-2026-06-08,Wagyu Burger,28.92,7,12.0
-2026-06-08,Margherita Pizza,17.53,1,4.0
-2026-06-08,Lobster Bisque,17.58,28,7.5
-2026-06-08,Vegan Quinoa Bowl,17.13,37,5.0
-2026-06-09,Truffle Pasta,23.34,6,8.5
-2026-06-09,Wagyu Burger,26.2,47,12.0
-2026-06-09,Margherita Pizza,16.46,7,4.0
-2026-06-09,Lobster Bisque,15.69,35,7.5
-2026-06-09,Vegan Quinoa Bowl,18.1,15,5.0
-2026-06-10,Truffle Pasta,24.61,1,8.5
-2026-06-10,Wagyu Burger,24.26,73,12.0
-2026-06-10,Margherita Pizza,16.93,1,4.0
-2026-06-10,Lobster Bisque,22.75,1,7.5
-2026-06-10,Vegan Quinoa Bowl,18.35,14,5.0
-2026-06-11,Truffle Pasta,20.36,36,8.5
-2026-06-11,Wagyu Burger,23.53,91,12.0
-2026-06-11,Margherita Pizza,18.31,1,4.0
-2026-06-11,Lobster Bisque,16.85,26,7.5
-2026-06-11,Vegan Quinoa Bowl,18.38,13,5.0
-2026-06-12,Truffle Pasta,25.46,1,8.5
-2026-06-12,Wagyu Burger,35.48,1,12.0
-2026-06-12,Margherita Pizza,20.44,1,4.0
-2026-06-12,Lobster Bisque,21.44,7,7.5
-2026-06-12,Vegan Quinoa Bowl,19.91,1,5.0
-2026-06-13,Truffle Pasta,18.12,56,8.5
-2026-06-13,Wagyu Burger,33.01,1,12.0
-2026-06-13,Margherita Pizza,15.54,33,4.0
-2026-06-13,Lobster Bisque,16.09,33,7.5
-2026-06-13,Vegan Quinoa Bowl,15.98,60,5.0
-2026-06-14,Truffle Pasta,22.81,7,8.5
-2026-06-14,Wagyu Burger,28.91,6,12.0
-2026-06-14,Margherita Pizza,15.99,21,4.0
-2026-06-14,Lobster Bisque,21.23,5,7.5
-2026-06-14,Vegan Quinoa Bowl,16.75,43,5.0
-2026-06-15,Truffle Pasta,23.13,4,8.5
-2026-06-15,Wagyu Burger,29.95,1,12.0
-2026-06-15,Margherita Pizza,17.73,1,4.0
-2026-06-15,Lobster Bisque,24.17,1,7.5
-2026-06-15,Vegan Quinoa Bowl,19.58,1,5.0
-2026-06-16,Truffle Pasta,23.91,1,8.5
-2026-06-16,Wagyu Burger,28.82,5,12.0
-2026-06-16,Margherita Pizza,19.37,1,4.0
-2026-06-16,Lobster Bisque,22.99,3,7.5
-2026-06-16,Vegan Quinoa Bowl,22.55,1,5.0
-2026-06-17,Truffle Pasta,18.03,56,8.5
-2026-06-17,Wagyu Burger,31.96,1,12.0
-2026-06-17,Margherita Pizza,18.05,1,4.0
-2026-06-17,Lobster Bisque,17.68,28,7.5
-2026-06-17,Vegan Quinoa Bowl,15.46,70,5.0
-2026-06-18,Truffle Pasta,21.43,28,8.5
-2026-06-18,Wagyu Burger,32.69,1,12.0
-2026-06-18,Margherita Pizza,20.54,1,4.0
-2026-06-18,Lobster Bisque,16.89,34,7.5
-2026-06-18,Vegan Quinoa Bowl,19.52,1,5.0
-2026-06-19,Truffle Pasta,28.5,1,8.5
-2026-06-19,Wagyu Burger,27.61,27,12.0
-2026-06-19,Margherita Pizza,17.44,1,4.0
-2026-06-19,Lobster Bisque,24.04,1,7.5
-2026-06-19,Vegan Quinoa Bowl,16.55,50,5.0
-2026-06-20,Truffle Pasta,25.86,1,8.5
-2026-06-20,Wagyu Burger,25.74,49,12.0
-2026-06-20,Margherita Pizza,17.07,1,4.0
-2026-06-20,Lobster Bisque,23.05,1,7.5
-2026-06-20,Vegan Quinoa Bowl,17.08,36,5.0
-2026-06-21,Truffle Pasta,21.88,25,8.5
-2026-06-21,Wagyu Burger,34.26,1,12.0
-2026-06-21,Margherita Pizza,15.35,38,4.0
-2026-06-21,Lobster Bisque,20.65,11,7.5
-2026-06-21,Vegan Quinoa Bowl,15.23,79,5.0
-2026-06-22,Truffle Pasta,23.69,3,8.5
-2026-06-22,Wagyu Burger,32.93,1,12.0
-2026-06-22,Margherita Pizza,19.05,1,4.0
-2026-06-22,Lobster Bisque,16.07,36,7.5
-2026-06-22,Vegan Quinoa Bowl,23.36,1,5.0
-2026-06-23,Truffle Pasta,25.71,1,8.5
-2026-06-23,Wagyu Burger,35.96,1,12.0
-2026-06-23,Margherita Pizza,18.89,1,4.0
-2026-06-23,Lobster Bisque,16.16,36,7.5
-2026-06-23,Vegan Quinoa Bowl,18.23,18,5.0
-2026-06-24,Truffle Pasta,18.4,53,8.5
-2026-06-24,Wagyu Burger,34.89,1,12.0
-2026-06-24,Margherita Pizza,13.45,96,4.0
-2026-06-24,Lobster Bisque,17.42,30,7.5
-2026-06-24,Vegan Quinoa Bowl,17.77,20,5.0
-2026-06-25,Truffle Pasta,27.28,1,8.5
-2026-06-25,Wagyu Burger,35.66,1,12.0
-2026-06-25,Margherita Pizza,17.54,1,4.0
-2026-06-25,Lobster Bisque,18.77,19,7.5
-2026-06-25,Vegan Quinoa Bowl,21.39,1,5.0
-2026-06-26,Truffle Pasta,25.36,1,8.5
-2026-06-26,Wagyu Burger,23.96,78,12.0
-2026-06-26,Margherita Pizza,14.83,52,4.0
-2026-06-26,Lobster Bisque,19.65,15,7.5
-2026-06-26,Vegan Quinoa Bowl,15.47,74,5.0
-2026-06-27,Truffle Pasta,25.79,1,8.5
-2026-06-27,Wagyu Burger,30.57,1,12.0
-2026-06-27,Margherita Pizza,15.8,21,4.0
-2026-06-27,Lobster Bisque,15.99,31,7.5
-2026-06-27,Vegan Quinoa Bowl,16.41,52,5.0
-2026-06-28,Truffle Pasta,26.42,1,8.5
-2026-06-28,Wagyu Burger,23.01,94,12.0
-2026-06-28,Margherita Pizza,20.74,1,4.0
-2026-06-28,Lobster Bisque,17.6,24,7.5
-2026-06-28,Vegan Quinoa Bowl,23.12,1,5.0
-2026-06-29,Truffle Pasta,19.43,41,8.5
-2026-06-29,Wagyu Burger,32.14,1,12.0
-2026-06-29,Margherita Pizza,17.82,1,4.0
-2026-06-29,Lobster Bisque,18.85,22,7.5
-2026-06-29,Vegan Quinoa Bowl,14.81,86,5.0
-2026-06-30,Truffle Pasta,21.94,23,8.5
-2026-06-30,Wagyu Burger,31.08,1,12.0
-2026-06-30,Margherita Pizza,14.16,74,4.0
-2026-06-30,Lobster Bisque,19.61,13,7.5
-2026-06-30,Vegan Quinoa Bowl,16.79,44,5.0
-2026-07-01,Truffle Pasta,28.32,1,8.5
-2026-07-01,Wagyu Burger,22.85,101,12.0
-2026-07-01,Margherita Pizza,15.28,40,4.0
-2026-07-01,Lobster Bisque,20.93,8,7.5
-2026-07-01,Vegan Quinoa Bowl,21.8,1,5.0
-2026-07-02,Truffle Pasta,22.18,18,8.5
-2026-07-02,Wagyu Burger,30.99,1,12.0
-2026-07-02,Margherita Pizza,13.46,93,4.0
-2026-07-02,Lobster Bisque,20.44,12,7.5
-2026-07-02,Vegan Quinoa Bowl,14.64,83,5.0
-2026-07-03,Truffle Pasta,26.15,1,8.5
-2026-07-03,Wagyu Burger,36.22,1,12.0
-2026-07-03,Margherita Pizza,15.81,29,4.0
-2026-07-03,Lobster Bisque,24.41,1,7.5
-2026-07-03,Vegan Quinoa Bowl,21.94,1,5.0
-2026-07-04,Truffle Pasta,18.01,55,8.5
-2026-07-04,Wagyu Burger,22.59,103,12.0
-2026-07-04,Margherita Pizza,19.72,1,4.0
-2026-07-04,Lobster Bisque,20.28,13,7.5
-2026-07-04,Vegan Quinoa Bowl,23.37,1,5.0
-2026-07-05,Truffle Pasta,24.04,1,8.5
-2026-07-05,Wagyu Burger,35.63,1,12.0
-2026-07-05,Margherita Pizza,14.78,60,4.0
-2026-07-05,Lobster Bisque,16.43,30,7.5
-2026-07-05,Vegan Quinoa Bowl,16.87,41,5.0
-2026-07-06,Truffle Pasta,20.12,34,8.5
-2026-07-06,Wagyu Burger,33.0,1,12.0
-2026-07-06,Margherita Pizza,15.67,32,4.0
-2026-07-06,Lobster Bisque,15.41,34,7.5
-2026-07-06,Vegan Quinoa Bowl,18.69,4,5.0
-2026-07-07,Truffle Pasta,23.32,2,8.5
-2026-07-07,Wagyu Burger,30.13,1,12.0
-2026-07-07,Margherita Pizza,13.51,98,4.0
-2026-07-07,Lobster Bisque,20.8,12,7.5
-2026-07-07,Vegan Quinoa Bowl,21.2,1,5.0
-2026-07-08,Truffle Pasta,24.63,1,8.5
-2026-07-08,Wagyu Burger,35.04,1,12.0
-2026-07-08,Margherita Pizza,15.6,29,4.0
-2026-07-08,Lobster Bisque,21.25,6,7.5
-2026-07-08,Vegan Quinoa Bowl,22.54,1,5.0
-2026-07-09,Truffle Pasta,23.62,1,8.5
-2026-07-09,Wagyu Burger,33.37,1,12.0
-2026-07-09,Margherita Pizza,16.99,1,4.0
-2026-07-09,Lobster Bisque,24.22,1,7.5
-2026-07-09,Vegan Quinoa Bowl,18.53,5,5.0
-2026-07-10,Truffle Pasta,23.01,8,8.5
-2026-07-10,Wagyu Burger,28.83,4,12.0
-2026-07-10,Margherita Pizza,17.77,1,4.0
-2026-07-10,Lobster Bisque,18.32,21,7.5
-2026-07-10,Vegan Quinoa Bowl,19.24,1,5.0
-2026-07-11,Truffle Pasta,19.01,50,8.5
-2026-07-11,Wagyu Burger,32.17,1,12.0
-2026-07-11,Margherita Pizza,14.26,75,4.0
-2026-07-11,Lobster Bisque,19.11,17,7.5
-2026-07-11,Vegan Quinoa Bowl,19.04,1,5.0
-2026-07-12,Truffle Pasta,24.22,1,8.5
-2026-07-12,Wagyu Burger,22.97,95,12.0
-2026-07-12,Margherita Pizza,15.56,34,4.0
-2026-07-12,Lobster Bisque,16.04,30,7.5
-2026-07-12,Vegan Quinoa Bowl,19.21,1,5.0
-2026-07-13,Truffle Pasta,19.02,53,8.5
-2026-07-13,Wagyu Burger,23.69,88,12.0
-2026-07-13,Margherita Pizza,18.3,1,4.0
-2026-07-13,Lobster Bisque,23.5,1,7.5
-2026-07-13,Vegan Quinoa Bowl,16.89,38,5.0
-2026-07-14,Truffle Pasta,18.53,52,8.5
-2026-07-14,Wagyu Burger,24.98,68,12.0
-2026-07-14,Margherita Pizza,16.68,2,4.0
-2026-07-14,Lobster Bisque,20.25,10,7.5
-2026-07-14,Vegan Quinoa Bowl,21.13,1,5.0
-2026-07-15,Truffle Pasta,19.06,47,8.5
-2026-07-15,Wagyu Burger,34.93,1,12.0
-2026-07-15,Margherita Pizza,16.38,6,4.0
-2026-07-15,Lobster Bisque,18.97,24,7.5
-2026-07-15,Vegan Quinoa Bowl,21.04,1,5.0
-2026-07-16,Truffle Pasta,21.14,30,8.5
-2026-07-16,Wagyu Burger,23.65,89,12.0
-2026-07-16,Margherita Pizza,19.92,1,4.0
-2026-07-16,Lobster Bisque,19.7,14,7.5
-2026-07-16,Vegan Quinoa Bowl,20.24,1,5.0
-2026-07-17,Truffle Pasta,18.56,55,8.5
-2026-07-17,Wagyu Burger,30.62,1,12.0
-2026-07-17,Margherita Pizza,17.49,1,4.0
-2026-07-17,Lobster Bisque,18.8,20,7.5
-2026-07-17,Vegan Quinoa Bowl,17.67,23,5.0
-2026-07-18,Truffle Pasta,20.29,38,8.5
-2026-07-18,Wagyu Burger,30.88,1,12.0
-2026-07-18,Margherita Pizza,12.86,114,4.0
-2026-07-18,Lobster Bisque,16.65,33,7.5
-2026-07-18,Vegan Quinoa Bowl,18.79,7,5.0
-2026-07-19,Truffle Pasta,27.46,1,8.5
-2026-07-19,Wagyu Burger,23.12,96,12.0
-2026-07-19,Margherita Pizza,18.38,1,4.0
-2026-07-19,Lobster Bisque,16.26,30,7.5
-2026-07-19,Vegan Quinoa Bowl,19.58,1,5.0
-2026-07-20,Truffle Pasta,17.66,64,8.5
-2026-07-20,Wagyu Burger,26.01,52,12.0
-2026-07-20,Margherita Pizza,18.58,1,4.0
-2026-07-20,Lobster Bisque,22.03,7,7.5
-2026-07-20,Vegan Quinoa Bowl,18.69,6,5.0
-2026-07-21,Truffle Pasta,19.66,44,8.5
-2026-07-21,Wagyu Burger,32.35,1,12.0
-2026-07-21,Margherita Pizza,16.86,1,4.0
-2026-07-21,Lobster Bisque,20.23,9,7.5
-2026-07-21,Vegan Quinoa Bowl,19.9,1,5.0
-2026-07-22,Truffle Pasta,23.99,1,8.5
-2026-07-22,Wagyu Burger,26.89,34,12.0
-2026-07-22,Margherita Pizza,13.21,100,4.0
-2026-07-22,Lobster Bisque,19.52,17,7.5
-2026-07-22,Vegan Quinoa Bowl,14.97,77,5.0
-2026-07-23,Truffle Pasta,21.15,25,8.5
-2026-07-23,Wagyu Burger,23.63,85,12.0
-2026-07-23,Margherita Pizza,12.82,119,4.0
-2026-07-23,Lobster Bisque,20.86,13,7.5
-2026-07-23,Vegan Quinoa Bowl,19.85,1,5.0
-2026-07-24,Truffle Pasta,21.44,21,8.5
-2026-07-24,Wagyu Burger,34.31,1,12.0
-2026-07-24,Margherita Pizza,13.79,89,4.0
-2026-07-24,Lobster Bisque,24.61,1,7.5
-2026-07-24,Vegan Quinoa Bowl,16.03,57,5.0
-2026-07-25,Truffle Pasta,27.79,1,8.5
-2026-07-25,Wagyu Burger,23.07,96,12.0
-2026-07-25,Margherita Pizza,19.42,1,4.0
-2026-07-25,Lobster Bisque,17.12,27,7.5
-2026-07-25,Vegan Quinoa Bowl,15.88,62,5.0
-2026-07-26,Truffle Pasta,20.19,37,8.5
-2026-07-26,Wagyu Burger,26.83,41,12.0
-2026-07-26,Margherita Pizza,18.26,1,4.0
-2026-07-26,Lobster Bisque,19.37,16,7.5
-2026-07-26,Vegan Quinoa Bowl,20.02,1,5.0
-2026-07-27,Truffle Pasta,25.82,1,8.5
-2026-07-27,Wagyu Burger,25.65,51,12.0
-2026-07-27,Margherita Pizza,15.93,19,4.0
-2026-07-27,Lobster Bisque,20.36,16,7.5
-2026-07-27,Vegan Quinoa Bowl,16.46,52,5.0
-2026-07-28,Truffle Pasta,18.89,52,8.5
-2026-07-28,Wagyu Burger,27.06,32,12.0
-2026-07-28,Margherita Pizza,15.48,34,4.0
-2026-07-28,Lobster Bisque,22.74,1,7.5
-2026-07-28,Vegan Quinoa Bowl,19.2,1,5.0
-2026-07-29,Truffle Pasta,23.9,2,8.5
-2026-07-29,Wagyu Burger,32.93,1,12.0
-2026-07-29,Margherita Pizza,19.03,1,4.0
-2026-07-29,Lobster Bisque,15.52,38,7.5
-2026-07-29,Vegan Quinoa Bowl,20.83,1,5.0
-2026-07-30,Truffle Pasta,27.24,1,8.5
-2026-07-30,Wagyu Burger,23.84,81,12.0
-2026-07-30,Margherita Pizza,16.46,5,4.0
-2026-07-30,Lobster Bisque,18.97,23,7.5
-2026-07-30,Vegan Quinoa Bowl,15.75,64,5.0
-2026-07-31,Truffle Pasta,25.54,1,8.5
-2026-07-31,Wagyu Burger,22.57,99,12.0
-2026-07-31,Margherita Pizza,18.35,1,4.0
-2026-07-31,Lobster Bisque,22.0,5,7.5
-2026-07-31,Vegan Quinoa Bowl,21.84,1,5.0
-2026-08-01,Truffle Pasta,24.02,3,8.5
-2026-08-01,Wagyu Burger,28.33,18,12.0
-2026-08-01,Margherita Pizza,16.85,1,4.0
-2026-08-01,Lobster Bisque,17.63,29,7.5
-2026-08-01,Vegan Quinoa Bowl,22.25,1,5.0
-2026-08-02,Truffle Pasta,27.71,1,8.5
-2026-08-02,Wagyu Burger,35.31,1,12.0
-2026-08-02,Margherita Pizza,18.01,1,4.0
-2026-08-02,Lobster Bisque,20.67,15,7.5
-2026-08-02,Vegan Quinoa Bowl,18.22,18,5.0
-2026-08-03,Truffle Pasta,26.84,1,8.5
-2026-08-03,Wagyu Burger,24.12,78,12.0
-2026-08-03,Margherita Pizza,20.68,1,4.0
-2026-08-03,Lobster Bisque,16.38,37,7.5
-2026-08-03,Vegan Quinoa Bowl,17.39,33,5.0
-2026-08-04,Truffle Pasta,23.31,9,8.5
-2026-08-04,Wagyu Burger,30.91,1,12.0
-2026-08-04,Margherita Pizza,18.75,1,4.0
-2026-08-04,Lobster Bisque,22.68,5,7.5
-2026-08-04,Vegan Quinoa Bowl,15.43,70,5.0
-2026-08-05,Truffle Pasta,23.51,5,8.5
-2026-08-05,Wagyu Burger,27.25,28,12.0
-2026-08-05,Margherita Pizza,16.65,1,4.0
-2026-08-05,Lobster Bisque,20.78,9,7.5
-2026-08-05,Vegan Quinoa Bowl,16.63,51,5.0
-2026-08-06,Truffle Pasta,23.08,10,8.5
-2026-08-06,Wagyu Burger,22.87,92,12.0
-2026-08-06,Margherita Pizza,15.7,30,4.0
-2026-08-06,Lobster Bisque,17.29,25,7.5
-2026-08-06,Vegan Quinoa Bowl,20.37,1,5.0
-2026-08-07,Truffle Pasta,28.33,1,8.5
-2026-08-07,Wagyu Burger,24.48,73,12.0
-2026-08-07,Margherita Pizza,19.69,1,4.0
-2026-08-07,Lobster Bisque,19.97,11,7.5
-2026-08-07,Vegan Quinoa Bowl,17.19,38,5.0
-2026-08-08,Truffle Pasta,22.29,20,8.5
-2026-08-08,Wagyu Burger,34.97,1,12.0
-2026-08-08,Margherita Pizza,13.09,110,4.0
-2026-08-08,Lobster Bisque,20.78,7,7.5
-2026-08-08,Vegan Quinoa Bowl,21.38,1,5.0
-2026-08-09,Truffle Pasta,23.37,2,8.5
-2026-08-09,Wagyu Burger,28.01,20,12.0
-2026-08-09,Margherita Pizza,18.92,1,4.0
-2026-08-09,Lobster Bisque,16.93,32,7.5
-2026-08-09,Vegan Quinoa Bowl,22.92,1,5.0
-2026-08-10,Truffle Pasta,24.68,1,8.5
-2026-08-10,Wagyu Burger,22.76,95,12.0
-2026-08-10,Margherita Pizza,19.74,1,4.0
-2026-08-10,Lobster Bisque,15.46,39,7.5
-2026-08-10,Vegan Quinoa Bowl,16.68,48,5.0
-2026-08-11,Truffle Pasta,24.99,1,8.5
-2026-08-11,Wagyu Burger,23.86,82,12.0
-2026-08-11,Margherita Pizza,14.23,69,4.0
-2026-08-11,Lobster Bisque,20.49,15,7.5
-2026-08-11,Vegan Quinoa Bowl,15.29,77,5.0
-2026-08-12,Truffle Pasta,25.54,1,8.5
-2026-08-12,Wagyu Burger,33.7,1,12.0
-2026-08-12,Margherita Pizza,20.36,1,4.0
-2026-08-12,Lobster Bisque,17.15,31,7.5
-2026-08-12,Vegan Quinoa Bowl,22.47,1,5.0
-2026-08-13,Truffle Pasta,24.57,1,8.5
-2026-08-13,Wagyu Burger,25.31,58,12.0
-2026-08-13,Margherita Pizza,13.78,84,4.0
-2026-08-13,Lobster Bisque,20.74,8,7.5
-2026-08-13,Vegan Quinoa Bowl,22.43,1,5.0
-2026-08-14,Truffle Pasta,21.36,23,8.5
-2026-08-14,Wagyu Burger,27.48,29,12.0
-2026-08-14,Margherita Pizza,14.94,51,4.0
-2026-08-14,Lobster Bisque,18.48,26,7.5
-2026-08-14,Vegan Quinoa Bowl,18.33,11,5.0
-2026-08-15,Truffle Pasta,28.03,1,8.5
-2026-08-15,Wagyu Burger,33.32,1,12.0
-2026-08-15,Margherita Pizza,19.75,1,4.0
-2026-08-15,Lobster Bisque,24.56,1,7.5
-2026-08-15,Vegan Quinoa Bowl,21.6,1,5.0
-2026-08-16,Truffle Pasta,22.93,6,8.5
-2026-08-16,Wagyu Burger,26.16,50,12.0
-2026-08-16,Margherita Pizza,18.39,1,4.0
-2026-08-16,Lobster Bisque,17.65,27,7.5
-2026-08-16,Vegan Quinoa Bowl,20.21,1,5.0
+Date,Dish_Name,Price_Sold_USD,Quantity_Sold,Cost_USD
+2026-05-09,Chocolate Ice Cream Tub,7.6,63,3.0
+2026-05-09,Cold Brew Coffee,5.2,79,1.5
+2026-05-09,Gourmet Burger,17.61,38,6.5
+2026-05-09,Artisan Pizza,21.64,41,7.0
+2026-05-09,Fruit Parfait,7.28,40,2.5
+2026-05-10,Chocolate Ice Cream Tub,8.48,15,3.0
+2026-05-10,Cold Brew Coffee,5.94,25,1.5
+2026-05-10,Gourmet Burger,21.16,1,6.5
+2026-05-10,Artisan Pizza,19.2,90,7.0
+2026-05-10,Fruit Parfait,7.33,40,2.5
+2026-05-11,Chocolate Ice Cream Tub,8.08,40,3.0
+2026-05-11,Cold Brew Coffee,4.58,132,1.5
+2026-05-11,Gourmet Burger,14.74,125,6.5
+2026-05-11,Artisan Pizza,20.82,58,7.0
+2026-05-11,Fruit Parfait,5.85,93,2.5
+2026-05-12,Chocolate Ice Cream Tub,7.62,57,3.0
+2026-05-12,Cold Brew Coffee,5.18,77,1.5
+2026-05-12,Gourmet Burger,20.59,1,6.5
+2026-05-12,Artisan Pizza,21.56,40,7.0
+2026-05-12,Fruit Parfait,8.26,1,2.5
+2026-05-13,Chocolate Ice Cream Tub,7.63,58,3.0
+2026-05-13,Cold Brew Coffee,4.46,147,1.5
+2026-05-13,Gourmet Burger,19.32,1,6.5
+2026-05-13,Artisan Pizza,21.96,37,7.0
+2026-05-13,Fruit Parfait,6.09,81,2.5
+2026-05-14,Chocolate Ice Cream Tub,7.23,81,3.0
+2026-05-14,Cold Brew Coffee,5.51,54,1.5
+2026-05-14,Gourmet Burger,15.9,90,6.5
+2026-05-14,Artisan Pizza,19.23,91,7.0
+2026-05-14,Fruit Parfait,7.96,7,2.5
+2026-05-15,Chocolate Ice Cream Tub,7.66,55,3.0
+2026-05-15,Cold Brew Coffee,5.2,88,1.5
+2026-05-15,Gourmet Burger,16.75,65,6.5
+2026-05-15,Artisan Pizza,18.0,114,7.0
+2026-05-15,Fruit Parfait,6.69,58,2.5
+2026-05-16,Chocolate Ice Cream Tub,8.13,36,3.0
+2026-05-16,Cold Brew Coffee,4.71,125,1.5
+2026-05-16,Gourmet Burger,15.41,106,6.5
+2026-05-16,Artisan Pizza,18.26,111,7.0
+2026-05-16,Fruit Parfait,6.79,53,2.5
+2026-05-17,Chocolate Ice Cream Tub,7.04,91,3.0
+2026-05-17,Cold Brew Coffee,4.03,185,1.5
+2026-05-17,Gourmet Burger,19.49,1,6.5
+2026-05-17,Artisan Pizza,24.55,1,7.0
+2026-05-17,Fruit Parfait,5.81,98,2.5
+2026-05-18,Chocolate Ice Cream Tub,8.48,17,3.0
+2026-05-18,Cold Brew Coffee,5.7,44,1.5
+2026-05-18,Gourmet Burger,16.78,65,6.5
+2026-05-18,Artisan Pizza,24.02,1,7.0
+2026-05-18,Fruit Parfait,8.08,1,2.5
+2026-05-19,Chocolate Ice Cream Tub,7.63,56,3.0
+2026-05-19,Cold Brew Coffee,5.52,61,1.5
+2026-05-19,Gourmet Burger,17.96,25,6.5
+2026-05-19,Artisan Pizza,23.85,1,7.0
+2026-05-19,Fruit Parfait,5.67,100,2.5
+2026-05-20,Chocolate Ice Cream Tub,6.5,117,3.0
+2026-05-20,Cold Brew Coffee,4.95,96,1.5
+2026-05-20,Gourmet Burger,20.93,1,6.5
+2026-05-20,Artisan Pizza,22.35,27,7.0
+2026-05-20,Fruit Parfait,6.24,81,2.5
+2026-05-21,Chocolate Ice Cream Tub,7.33,74,3.0
+2026-05-21,Cold Brew Coffee,5.76,38,1.5
+2026-05-21,Gourmet Burger,20.22,1,6.5
+2026-05-21,Artisan Pizza,18.53,102,7.0
+2026-05-21,Fruit Parfait,7.85,14,2.5
+2026-05-22,Chocolate Ice Cream Tub,9.26,1,3.0
+2026-05-22,Cold Brew Coffee,5.79,32,1.5
+2026-05-22,Gourmet Burger,20.93,1,6.5
+2026-05-22,Artisan Pizza,19.61,83,7.0
+2026-05-22,Fruit Parfait,5.6,109,2.5
+2026-05-23,Chocolate Ice Cream Tub,7.38,72,3.0
+2026-05-23,Cold Brew Coffee,5.02,96,1.5
+2026-05-23,Gourmet Burger,17.89,27,6.5
+2026-05-23,Artisan Pizza,18.65,100,7.0
+2026-05-23,Fruit Parfait,6.28,83,2.5
+2026-05-24,Chocolate Ice Cream Tub,7.43,71,3.0
+2026-05-24,Cold Brew Coffee,5.41,73,1.5
+2026-05-24,Gourmet Burger,14.87,119,6.5
+2026-05-24,Artisan Pizza,26.07,1,7.0
+2026-05-24,Fruit Parfait,7.55,25,2.5
+2026-05-25,Chocolate Ice Cream Tub,7.36,67,3.0
+2026-05-25,Cold Brew Coffee,6.0,26,1.5
+2026-05-25,Gourmet Burger,21.43,1,6.5
+2026-05-25,Artisan Pizza,18.05,113,7.0
+2026-05-25,Fruit Parfait,6.57,62,2.5
+2026-05-26,Chocolate Ice Cream Tub,7.17,78,3.0
+2026-05-26,Cold Brew Coffee,5.06,90,1.5
+2026-05-26,Gourmet Burger,16.14,83,6.5
+2026-05-26,Artisan Pizza,18.31,106,7.0
+2026-05-26,Fruit Parfait,6.28,78,2.5
+2026-05-27,Chocolate Ice Cream Tub,7.58,60,3.0
+2026-05-27,Cold Brew Coffee,5.97,22,1.5
+2026-05-27,Gourmet Burger,20.28,1,6.5
+2026-05-27,Artisan Pizza,18.93,93,7.0
+2026-05-27,Fruit Parfait,6.12,82,2.5
+2026-05-28,Chocolate Ice Cream Tub,8.29,24,3.0
+2026-05-28,Cold Brew Coffee,4.03,169,1.5
+2026-05-28,Gourmet Burger,20.23,1,6.5
+2026-05-28,Artisan Pizza,23.28,7,7.0
+2026-05-28,Fruit Parfait,8.23,2,2.5
+2026-05-29,Chocolate Ice Cream Tub,7.64,55,3.0
+2026-05-29,Cold Brew Coffee,5.68,45,1.5
+2026-05-29,Gourmet Burger,16.86,58,6.5
+2026-05-29,Artisan Pizza,19.44,87,7.0
+2026-05-29,Fruit Parfait,8.06,4,2.5
+2026-05-30,Chocolate Ice Cream Tub,7.13,87,3.0
+2026-05-30,Cold Brew Coffee,5.03,103,1.5
+2026-05-30,Gourmet Burger,16.14,83,6.5
+2026-05-30,Artisan Pizza,22.51,22,7.0
+2026-05-30,Fruit Parfait,6.13,87,2.5
+2026-05-31,Chocolate Ice Cream Tub,7.52,62,3.0
+2026-05-31,Cold Brew Coffee,5.71,33,1.5
+2026-05-31,Gourmet Burger,19.02,1,6.5
+2026-05-31,Artisan Pizza,25.83,1,7.0
+2026-05-31,Fruit Parfait,8.12,3,2.5
+2026-06-01,Chocolate Ice Cream Tub,8.26,31,3.0
+2026-06-01,Cold Brew Coffee,5.33,80,1.5
+2026-06-01,Gourmet Burger,15.56,98,6.5
+2026-06-01,Artisan Pizza,21.87,34,7.0
+2026-06-01,Fruit Parfait,7.43,35,2.5
+2026-06-02,Chocolate Ice Cream Tub,6.96,91,3.0
+2026-06-02,Cold Brew Coffee,4.47,152,1.5
+2026-06-02,Gourmet Burger,15.69,95,6.5
+2026-06-02,Artisan Pizza,23.39,2,7.0
+2026-06-02,Fruit Parfait,7.12,50,2.5
+2026-06-03,Chocolate Ice Cream Tub,7.58,63,3.0
+2026-06-03,Cold Brew Coffee,4.5,135,1.5
+2026-06-03,Gourmet Burger,21.45,1,6.5
+2026-06-03,Artisan Pizza,25.45,1,7.0
+2026-06-03,Fruit Parfait,6.82,56,2.5
+2026-06-04,Chocolate Ice Cream Tub,8.01,35,3.0
+2026-06-04,Cold Brew Coffee,4.39,153,1.5
+2026-06-04,Gourmet Burger,16.42,74,6.5
+2026-06-04,Artisan Pizza,24.36,1,7.0
+2026-06-04,Fruit Parfait,8.38,1,2.5
+2026-06-05,Chocolate Ice Cream Tub,9.23,1,3.0
+2026-06-05,Cold Brew Coffee,5.91,33,1.5
+2026-06-05,Gourmet Burger,18.38,15,6.5
+2026-06-05,Artisan Pizza,26.23,1,7.0
+2026-06-05,Fruit Parfait,6.42,72,2.5
+2026-06-06,Chocolate Ice Cream Tub,7.01,85,3.0
+2026-06-06,Cold Brew Coffee,4.63,136,1.5
+2026-06-06,Gourmet Burger,18.41,13,6.5
+2026-06-06,Artisan Pizza,25.78,1,7.0
+2026-06-06,Fruit Parfait,5.87,95,2.5
+2026-06-07,Chocolate Ice Cream Tub,7.55,59,3.0
+2026-06-07,Cold Brew Coffee,4.65,124,1.5
+2026-06-07,Gourmet Burger,19.42,1,6.5
+2026-06-07,Artisan Pizza,23.84,1,7.0
+2026-06-07,Fruit Parfait,6.42,74,2.5
+2026-06-08,Chocolate Ice Cream Tub,7.74,49,3.0
+2026-06-08,Cold Brew Coffee,5.73,43,1.5
+2026-06-08,Gourmet Burger,14.99,114,6.5
+2026-06-08,Artisan Pizza,23.13,10,7.0
+2026-06-08,Fruit Parfait,7.42,30,2.5
+2026-06-09,Chocolate Ice Cream Tub,7.48,62,3.0
+2026-06-09,Cold Brew Coffee,4.19,172,1.5
+2026-06-09,Gourmet Burger,17.75,36,6.5
+2026-06-09,Artisan Pizza,24.98,1,7.0
+2026-06-09,Fruit Parfait,5.69,100,2.5
+2026-06-10,Chocolate Ice Cream Tub,6.52,115,3.0
+2026-06-10,Cold Brew Coffee,5.07,88,1.5
+2026-06-10,Gourmet Burger,18.16,23,6.5
+2026-06-10,Artisan Pizza,19.99,73,7.0
+2026-06-10,Fruit Parfait,7.34,34,2.5
+2026-06-11,Chocolate Ice Cream Tub,9.09,1,3.0
+2026-06-11,Cold Brew Coffee,4.82,106,1.5
+2026-06-11,Gourmet Burger,18.99,1,6.5
+2026-06-11,Artisan Pizza,18.77,95,7.0
+2026-06-11,Fruit Parfait,7.05,45,2.5
+2026-06-12,Chocolate Ice Cream Tub,8.94,1,3.0
+2026-06-12,Cold Brew Coffee,4.88,103,1.5
+2026-06-12,Gourmet Burger,15.73,92,6.5
+2026-06-12,Artisan Pizza,23.66,1,7.0
+2026-06-12,Fruit Parfait,6.09,81,2.5
+2026-06-13,Chocolate Ice Cream Tub,7.82,49,3.0
+2026-06-13,Cold Brew Coffee,5.43,62,1.5
+2026-06-13,Gourmet Burger,21.13,1,6.5
+2026-06-13,Artisan Pizza,26.0,1,7.0
+2026-06-13,Fruit Parfait,7.44,31,2.5
+2026-06-14,Chocolate Ice Cream Tub,8.36,24,3.0
+2026-06-14,Cold Brew Coffee,4.1,177,1.5
+2026-06-14,Gourmet Burger,15.54,98,6.5
+2026-06-14,Artisan Pizza,20.61,61,7.0
+2026-06-14,Fruit Parfait,5.73,95,2.5
+2026-06-15,Chocolate Ice Cream Tub,7.4,68,3.0
+2026-06-15,Cold Brew Coffee,4.35,157,1.5
+2026-06-15,Gourmet Burger,15.1,115,6.5
+2026-06-15,Artisan Pizza,21.77,34,7.0
+2026-06-15,Fruit Parfait,6.9,52,2.5
+2026-06-16,Chocolate Ice Cream Tub,7.68,57,3.0
+2026-06-16,Cold Brew Coffee,5.27,69,1.5
+2026-06-16,Gourmet Burger,16.28,77,6.5
+2026-06-16,Artisan Pizza,23.11,9,7.0
+2026-06-16,Fruit Parfait,7.0,52,2.5
+2026-06-17,Chocolate Ice Cream Tub,8.51,13,3.0
+2026-06-17,Cold Brew Coffee,5.23,86,1.5
+2026-06-17,Gourmet Burger,19.03,1,6.5
+2026-06-17,Artisan Pizza,25.23,1,7.0
+2026-06-17,Fruit Parfait,7.84,12,2.5
+2026-06-18,Chocolate Ice Cream Tub,8.23,24,3.0
+2026-06-18,Cold Brew Coffee,4.92,114,1.5
+2026-06-18,Gourmet Burger,20.31,1,6.5
+2026-06-18,Artisan Pizza,21.0,50,7.0
+2026-06-18,Fruit Parfait,7.42,38,2.5
+2026-06-19,Chocolate Ice Cream Tub,7.03,85,3.0
+2026-06-19,Cold Brew Coffee,4.08,180,1.5
+2026-06-19,Gourmet Burger,19.32,1,6.5
+2026-06-19,Artisan Pizza,23.37,6,7.0
+2026-06-19,Fruit Parfait,7.97,15,2.5
+2026-06-20,Chocolate Ice Cream Tub,7.49,63,3.0
+2026-06-20,Cold Brew Coffee,4.56,128,1.5
+2026-06-20,Gourmet Burger,19.39,1,6.5
+2026-06-20,Artisan Pizza,23.13,11,7.0
+2026-06-20,Fruit Parfait,5.71,104,2.5
+2026-06-21,Chocolate Ice Cream Tub,8.97,1,3.0
+2026-06-21,Cold Brew Coffee,5.1,86,1.5
+2026-06-21,Gourmet Burger,19.8,1,6.5
+2026-06-21,Artisan Pizza,26.32,1,7.0
+2026-06-21,Fruit Parfait,6.64,65,2.5
+2026-06-22,Chocolate Ice Cream Tub,8.26,29,3.0
+2026-06-22,Cold Brew Coffee,5.86,25,1.5
+2026-06-22,Gourmet Burger,16.12,85,6.5
+2026-06-22,Artisan Pizza,24.11,1,7.0
+2026-06-22,Fruit Parfait,5.89,89,2.5
+2026-06-23,Chocolate Ice Cream Tub,8.11,33,3.0
+2026-06-23,Cold Brew Coffee,5.65,49,1.5
+2026-06-23,Gourmet Burger,20.85,1,6.5
+2026-06-23,Artisan Pizza,18.07,112,7.0
+2026-06-23,Fruit Parfait,8.14,7,2.5
+2026-06-24,Chocolate Ice Cream Tub,7.42,68,3.0
+2026-06-24,Cold Brew Coffee,5.15,91,1.5
+2026-06-24,Gourmet Burger,15.0,118,6.5
+2026-06-24,Artisan Pizza,20.18,66,7.0
+2026-06-24,Fruit Parfait,7.15,42,2.5
+2026-06-25,Chocolate Ice Cream Tub,8.81,2,3.0
+2026-06-25,Cold Brew Coffee,5.56,51,1.5
+2026-06-25,Gourmet Burger,15.06,113,6.5
+2026-06-25,Artisan Pizza,26.17,1,7.0
+2026-06-25,Fruit Parfait,7.14,43,2.5
+2026-06-26,Chocolate Ice Cream Tub,8.76,1,3.0
+2026-06-26,Cold Brew Coffee,5.94,22,1.5
+2026-06-26,Gourmet Burger,19.88,1,6.5
+2026-06-26,Artisan Pizza,25.23,1,7.0
+2026-06-26,Fruit Parfait,5.84,98,2.5
+2026-06-27,Chocolate Ice Cream Tub,6.63,105,3.0
+2026-06-27,Cold Brew Coffee,5.78,28,1.5
+2026-06-27,Gourmet Burger,14.99,118,6.5
+2026-06-27,Artisan Pizza,19.65,81,7.0
+2026-06-27,Fruit Parfait,6.64,62,2.5
+2026-06-28,Chocolate Ice Cream Tub,7.16,84,3.0
+2026-06-28,Cold Brew Coffee,5.97,15,1.5
+2026-06-28,Gourmet Burger,16.92,60,6.5
+2026-06-28,Artisan Pizza,18.33,107,7.0
+2026-06-28,Fruit Parfait,6.66,64,2.5
+2026-06-29,Chocolate Ice Cream Tub,7.76,50,3.0
+2026-06-29,Cold Brew Coffee,4.22,154,1.5
+2026-06-29,Gourmet Burger,16.23,78,6.5
+2026-06-29,Artisan Pizza,21.72,36,7.0
+2026-06-29,Fruit Parfait,7.67,25,2.5
+2026-06-30,Chocolate Ice Cream Tub,6.78,104,3.0
+2026-06-30,Cold Brew Coffee,5.49,52,1.5
+2026-06-30,Gourmet Burger,18.6,6,6.5
+2026-06-30,Artisan Pizza,20.9,52,7.0
+2026-06-30,Fruit Parfait,5.83,91,2.5
+2026-07-01,Chocolate Ice Cream Tub,7.12,85,3.0
+2026-07-01,Cold Brew Coffee,5.6,54,1.5
+2026-07-01,Gourmet Burger,21.38,1,6.5
+2026-07-01,Artisan Pizza,20.44,66,7.0
+2026-07-01,Fruit Parfait,8.19,1,2.5
+2026-07-02,Chocolate Ice Cream Tub,7.21,77,3.0
+2026-07-02,Cold Brew Coffee,5.94,31,1.5
+2026-07-02,Gourmet Burger,15.6,96,6.5
+2026-07-02,Artisan Pizza,23.72,2,7.0
+2026-07-02,Fruit Parfait,8.39,1,2.5
+2026-07-03,Chocolate Ice Cream Tub,8.27,28,3.0
+2026-07-03,Cold Brew Coffee,4.09,173,1.5
+2026-07-03,Gourmet Burger,21.3,1,6.5
+2026-07-03,Artisan Pizza,18.54,103,7.0
+2026-07-03,Fruit Parfait,6.38,72,2.5
+2026-07-04,Chocolate Ice Cream Tub,7.88,43,3.0
+2026-07-04,Cold Brew Coffee,4.53,131,1.5
+2026-07-04,Gourmet Burger,21.42,1,6.5
+2026-07-04,Artisan Pizza,23.74,1,7.0
+2026-07-04,Fruit Parfait,6.38,73,2.5
+2026-07-05,Chocolate Ice Cream Tub,9.0,1,3.0
+2026-07-05,Cold Brew Coffee,5.65,54,1.5
+2026-07-05,Gourmet Burger,17.4,46,6.5
+2026-07-05,Artisan Pizza,23.0,11,7.0
+2026-07-05,Fruit Parfait,5.83,92,2.5
+2026-07-06,Chocolate Ice Cream Tub,8.17,31,3.0
+2026-07-06,Cold Brew Coffee,4.05,166,1.5
+2026-07-06,Gourmet Burger,20.0,1,6.5
+2026-07-06,Artisan Pizza,26.29,1,7.0
+2026-07-06,Fruit Parfait,6.65,67,2.5
+2026-07-07,Chocolate Ice Cream Tub,7.62,59,3.0
+2026-07-07,Cold Brew Coffee,5.66,53,1.5
+2026-07-07,Gourmet Burger,20.44,1,6.5
+2026-07-07,Artisan Pizza,17.92,117,7.0
+2026-07-07,Fruit Parfait,6.37,76,2.5
+2026-07-08,Chocolate Ice Cream Tub,9.17,1,3.0
+2026-07-08,Cold Brew Coffee,5.07,88,1.5
+2026-07-08,Gourmet Burger,21.58,1,6.5
+2026-07-08,Artisan Pizza,22.75,19,7.0
+2026-07-08,Fruit Parfait,8.25,4,2.5
+2026-07-09,Chocolate Ice Cream Tub,7.61,59,3.0
+2026-07-09,Cold Brew Coffee,4.9,110,1.5
+2026-07-09,Gourmet Burger,16.21,82,6.5
+2026-07-09,Artisan Pizza,22.93,16,7.0
+2026-07-09,Fruit Parfait,8.06,9,2.5
+2026-07-10,Chocolate Ice Cream Tub,8.38,23,3.0
+2026-07-10,Cold Brew Coffee,4.04,167,1.5
+2026-07-10,Gourmet Burger,17.83,31,6.5
+2026-07-10,Artisan Pizza,22.18,29,7.0
+2026-07-10,Fruit Parfait,7.89,13,2.5
+2026-07-11,Chocolate Ice Cream Tub,6.68,110,3.0
+2026-07-11,Cold Brew Coffee,5.18,89,1.5
+2026-07-11,Gourmet Burger,17.43,45,6.5
+2026-07-11,Artisan Pizza,23.06,10,7.0
+2026-07-11,Fruit Parfait,7.85,17,2.5
+2026-07-12,Chocolate Ice Cream Tub,6.84,95,3.0
+2026-07-12,Cold Brew Coffee,4.7,114,1.5
+2026-07-12,Gourmet Burger,18.98,1,6.5
+2026-07-12,Artisan Pizza,18.4,103,7.0
+2026-07-12,Fruit Parfait,6.58,66,2.5
+2026-07-13,Chocolate Ice Cream Tub,7.84,50,3.0
+2026-07-13,Cold Brew Coffee,5.05,102,1.5
+2026-07-13,Gourmet Burger,21.24,1,6.5
+2026-07-13,Artisan Pizza,21.64,37,7.0
+2026-07-13,Fruit Parfait,6.98,48,2.5
+2026-07-14,Chocolate Ice Cream Tub,7.87,43,3.0
+2026-07-14,Cold Brew Coffee,5.24,71,1.5
+2026-07-14,Gourmet Burger,16.77,63,6.5
+2026-07-14,Artisan Pizza,22.7,18,7.0
+2026-07-14,Fruit Parfait,5.81,100,2.5
+2026-07-15,Chocolate Ice Cream Tub,7.87,47,3.0
+2026-07-15,Cold Brew Coffee,5.4,60,1.5
+2026-07-15,Gourmet Burger,15.71,93,6.5
+2026-07-15,Artisan Pizza,25.49,1,7.0
+2026-07-15,Fruit Parfait,7.04,44,2.5
+2026-07-16,Chocolate Ice Cream Tub,8.33,21,3.0
+2026-07-16,Cold Brew Coffee,4.08,167,1.5
+2026-07-16,Gourmet Burger,16.88,59,6.5
+2026-07-16,Artisan Pizza,19.16,91,7.0
+2026-07-16,Fruit Parfait,7.14,43,2.5
+2026-07-17,Chocolate Ice Cream Tub,7.87,43,3.0
+2026-07-17,Cold Brew Coffee,4.26,161,1.5
+2026-07-17,Gourmet Burger,16.72,64,6.5
+2026-07-17,Artisan Pizza,24.63,1,7.0
+2026-07-17,Fruit Parfait,7.53,30,2.5
+2026-07-18,Chocolate Ice Cream Tub,9.2,1,3.0
+2026-07-18,Cold Brew Coffee,4.55,126,1.5
+2026-07-18,Gourmet Burger,15.01,116,6.5
+2026-07-18,Artisan Pizza,19.22,91,7.0
+2026-07-18,Fruit Parfait,7.1,48,2.5
+2026-07-19,Chocolate Ice Cream Tub,7.95,44,3.0
+2026-07-19,Cold Brew Coffee,5.06,86,1.5
+2026-07-19,Gourmet Burger,19.78,1,6.5
+2026-07-19,Artisan Pizza,19.82,79,7.0
+2026-07-19,Fruit Parfait,7.52,30,2.5
+2026-07-20,Chocolate Ice Cream Tub,8.04,35,3.0
+2026-07-20,Cold Brew Coffee,4.89,100,1.5
+2026-07-20,Gourmet Burger,17.26,46,6.5
+2026-07-20,Artisan Pizza,24.09,1,7.0
+2026-07-20,Fruit Parfait,5.66,106,2.5
+2026-07-21,Chocolate Ice Cream Tub,9.09,1,3.0
+2026-07-21,Cold Brew Coffee,4.65,128,1.5
+2026-07-21,Gourmet Burger,16.08,86,6.5
+2026-07-21,Artisan Pizza,22.82,16,7.0
+2026-07-21,Fruit Parfait,6.59,69,2.5
+2026-07-22,Chocolate Ice Cream Tub,8.0,39,3.0
+2026-07-22,Cold Brew Coffee,5.07,85,1.5
+2026-07-22,Gourmet Burger,18.42,12,6.5
+2026-07-22,Artisan Pizza,22.57,19,7.0
+2026-07-22,Fruit Parfait,6.39,74,2.5
+2026-07-23,Chocolate Ice Cream Tub,9.28,1,3.0
+2026-07-23,Cold Brew Coffee,4.49,142,1.5
+2026-07-23,Gourmet Burger,16.78,61,6.5
+2026-07-23,Artisan Pizza,19.69,81,7.0
+2026-07-23,Fruit Parfait,6.23,80,2.5
+2026-07-24,Chocolate Ice Cream Tub,7.19,79,3.0
+2026-07-24,Cold Brew Coffee,5.7,41,1.5
+2026-07-24,Gourmet Burger,14.98,117,6.5
+2026-07-24,Artisan Pizza,17.76,119,7.0
+2026-07-24,Fruit Parfait,8.35,1,2.5
+2026-07-25,Chocolate Ice Cream Tub,7.67,55,3.0
+2026-07-25,Cold Brew Coffee,4.01,185,1.5
+2026-07-25,Gourmet Burger,17.93,28,6.5
+2026-07-25,Artisan Pizza,24.82,1,7.0
+2026-07-25,Fruit Parfait,7.16,45,2.5
+2026-07-26,Chocolate Ice Cream Tub,7.93,43,3.0
+2026-07-26,Cold Brew Coffee,4.37,143,1.5
+2026-07-26,Gourmet Burger,17.46,40,6.5
+2026-07-26,Artisan Pizza,24.08,1,7.0
+2026-07-26,Fruit Parfait,5.92,97,2.5
+2026-07-27,Chocolate Ice Cream Tub,8.86,1,3.0
+2026-07-27,Cold Brew Coffee,5.16,87,1.5
+2026-07-27,Gourmet Burger,21.11,1,6.5
+2026-07-27,Artisan Pizza,22.29,24,7.0
+2026-07-27,Fruit Parfait,6.63,66,2.5
+2026-07-28,Chocolate Ice Cream Tub,6.83,100,3.0
+2026-07-28,Cold Brew Coffee,5.1,83,1.5
+2026-07-28,Gourmet Burger,16.72,64,6.5
+2026-07-28,Artisan Pizza,18.37,108,7.0
+2026-07-28,Fruit Parfait,7.51,24,2.5
+2026-07-29,Chocolate Ice Cream Tub,6.77,104,3.0
+2026-07-29,Cold Brew Coffee,5.21,75,1.5
+2026-07-29,Gourmet Burger,16.91,57,6.5
+2026-07-29,Artisan Pizza,25.09,1,7.0
+2026-07-29,Fruit Parfait,8.3,1,2.5
+2026-07-30,Chocolate Ice Cream Tub,8.74,6,3.0
+2026-07-30,Cold Brew Coffee,4.41,139,1.5
+2026-07-30,Gourmet Burger,14.88,121,6.5
+2026-07-30,Artisan Pizza,25.01,1,7.0
+2026-07-30,Fruit Parfait,7.83,13,2.5
+2026-07-31,Chocolate Ice Cream Tub,6.93,93,3.0
+2026-07-31,Cold Brew Coffee,4.47,145,1.5
+2026-07-31,Gourmet Burger,18.17,22,6.5
+2026-07-31,Artisan Pizza,20.38,63,7.0
+2026-07-31,Fruit Parfait,6.7,63,2.5
+2026-08-01,Chocolate Ice Cream Tub,7.85,50,3.0
+2026-08-01,Cold Brew Coffee,4.75,128,1.5
+2026-08-01,Gourmet Burger,18.89,1,6.5
+2026-08-01,Artisan Pizza,24.18,1,7.0
+2026-08-01,Fruit Parfait,7.22,36,2.5
+2026-08-02,Chocolate Ice Cream Tub,9.28,1,3.0
+2026-08-02,Cold Brew Coffee,5.06,105,1.5
+2026-08-02,Gourmet Burger,20.93,1,6.5
+2026-08-02,Artisan Pizza,22.38,27,7.0
+2026-08-02,Fruit Parfait,8.23,1,2.5
+2026-08-03,Chocolate Ice Cream Tub,8.74,1,3.0
+2026-08-03,Cold Brew Coffee,5.59,42,1.5
+2026-08-03,Gourmet Burger,18.24,19,6.5
+2026-08-03,Artisan Pizza,24.54,1,7.0
+2026-08-03,Fruit Parfait,7.71,20,2.5
+2026-08-04,Chocolate Ice Cream Tub,8.89,1,3.0
+2026-08-04,Cold Brew Coffee,4.07,165,1.5
+2026-08-04,Gourmet Burger,19.89,1,6.5
+2026-08-04,Artisan Pizza,24.24,1,7.0
+2026-08-04,Fruit Parfait,7.9,11,2.5
+2026-08-05,Chocolate Ice Cream Tub,7.86,45,3.0
+2026-08-05,Cold Brew Coffee,4.79,113,1.5
+2026-08-05,Gourmet Burger,15.48,103,6.5
+2026-08-05,Artisan Pizza,23.96,1,7.0
+2026-08-05,Fruit Parfait,5.63,101,2.5
+2026-08-06,Chocolate Ice Cream Tub,8.62,8,3.0
+2026-08-06,Cold Brew Coffee,5.43,59,1.5
+2026-08-06,Gourmet Burger,20.35,1,6.5
+2026-08-06,Artisan Pizza,20.61,63,7.0
+2026-08-06,Fruit Parfait,6.72,65,2.5
+2026-08-07,Chocolate Ice Cream Tub,9.43,1,3.0
+2026-08-07,Cold Brew Coffee,5.01,89,1.5
+2026-08-07,Gourmet Burger,14.53,131,6.5
+2026-08-07,Artisan Pizza,22.82,16,7.0
+2026-08-07,Fruit Parfait,7.18,40,2.5
+2026-08-08,Chocolate Ice Cream Tub,8.93,1,3.0
+2026-08-08,Cold Brew Coffee,5.41,66,1.5
+2026-08-08,Gourmet Burger,19.95,1,6.5
+2026-08-08,Artisan Pizza,18.21,108,7.0
+2026-08-08,Fruit Parfait,7.66,25,2.5
+2026-08-09,Chocolate Ice Cream Tub,9.09,1,3.0
+2026-08-09,Cold Brew Coffee,4.25,154,1.5
+2026-08-09,Gourmet Burger,21.49,1,6.5
+2026-08-09,Artisan Pizza,18.7,96,7.0
+2026-08-09,Fruit Parfait,6.53,68,2.5
+2026-08-10,Chocolate Ice Cream Tub,8.06,39,3.0
+2026-08-10,Cold Brew Coffee,5.22,86,1.5
+2026-08-10,Gourmet Burger,14.79,120,6.5
+2026-08-10,Artisan Pizza,19.41,82,7.0
+2026-08-10,Fruit Parfait,5.61,108,2.5
+2026-08-11,Chocolate Ice Cream Tub,6.77,100,3.0
+2026-08-11,Cold Brew Coffee,5.07,94,1.5
+2026-08-11,Gourmet Burger,21.05,1,6.5
+2026-08-11,Artisan Pizza,21.83,35,7.0
+2026-08-11,Fruit Parfait,6.87,60,2.5
+2026-08-12,Chocolate Ice Cream Tub,6.51,112,3.0
+2026-08-12,Cold Brew Coffee,4.5,136,1.5
+2026-08-12,Gourmet Burger,15.59,100,6.5
+2026-08-12,Artisan Pizza,25.65,1,7.0
+2026-08-12,Fruit Parfait,7.79,23,2.5
+2026-08-13,Chocolate Ice Cream Tub,8.42,16,3.0
+2026-08-13,Cold Brew Coffee,5.33,69,1.5
+2026-08-13,Gourmet Burger,21.42,1,6.5
+2026-08-13,Artisan Pizza,18.91,97,7.0
+2026-08-13,Fruit Parfait,8.01,11,2.5
+2026-08-14,Chocolate Ice Cream Tub,8.01,35,3.0
+2026-08-14,Cold Brew Coffee,4.62,138,1.5
+2026-08-14,Gourmet Burger,15.91,89,6.5
+2026-08-14,Artisan Pizza,20.67,61,7.0
+2026-08-14,Fruit Parfait,6.13,86,2.5
+2026-08-15,Chocolate Ice Cream Tub,8.28,22,3.0
+2026-08-15,Cold Brew Coffee,5.55,60,1.5
+2026-08-15,Gourmet Burger,18.2,21,6.5
+2026-08-15,Artisan Pizza,21.83,38,7.0
+2026-08-15,Fruit Parfait,7.17,41,2.5
+2026-08-16,Chocolate Ice Cream Tub,6.98,92,3.0
+2026-08-16,Cold Brew Coffee,5.89,27,1.5
+2026-08-16,Gourmet Burger,16.35,75,6.5
+2026-08-16,Artisan Pizza,21.2,52,7.0
+2026-08-16,Fruit Parfait,8.34,1,2.5
