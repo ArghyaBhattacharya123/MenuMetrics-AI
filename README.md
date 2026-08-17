@@ -1,6 +1,6 @@
 # 📊 MenuMetrics-AI (Enterprise Financial Cockpit)
 
-![MenuMetrics-AI Dashboard](https://via.placeholder.com/1200x600.png?text=MenuMetrics-AI+Dashboard+Screenshot)
+![MenuMetrics-AI Dashboard](docs/screenshot.png)
 
 🔥 **Live Web Demo:** [Play Here](https://menumetrics-ai.onrender.com)
 > **Note:** The live demo is hosted on a free Render tier. If it hasn't been visited in 15 minutes, it will spin down to save resources. **It may take 30-60 seconds to wake up** on your first visit. Please be patient!
@@ -8,7 +8,7 @@
 ## 🚀 Overview
 MenuMetrics-AI is an enterprise-grade, one-stop financial operating system built for modern businesses. It empowers business owners and executives to bypass traditional spreadsheets by offering real-time financial intelligence, machine learning-powered price optimization, and deep inventory analytics.
 
-Designed as a globally accessible Progressive Web App (PWA), MenuMetrics-AI runs flawlessly across Desktop, Android, and iOS. It features **Fluffy**, a built-in offline AI companion that allows you to talk directly to your financial data using natural language.
+Designed as a globally accessible Progressive Web App (PWA), MenuMetrics-AI runs flawlessly across Desktop, Android, and iOS. It features **Fluffy**, a built-in offline Q&A assistant that lets you check your financial data using simple keyword queries — no internet or API keys required.
 
 ## 🛠️ Tech Stack
 - **Language:** Python 3.10+
