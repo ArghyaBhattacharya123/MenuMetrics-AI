@@ -21,7 +21,7 @@ Designed as a globally accessible Progressive Web App (PWA), MenuMetrics-AI runs
 ## ✨ Key Features
 - **Machine Learning Price Optimization:** Automatically simulate and predict the exact optimal selling price for any product to maximize profit margins based on historical elasticity.
 - **Automated Financial Intelligence:** Real-time, instant calculation of EBITDA, OpEx burn rates, COGS alerts, Net Profit After Tax (NPAT), and Tax Escrows.
-- **Fluffy AI Companion:** A built-in NLP conversational bot that lets you query top-selling items, revenue, and margins instantly—even entirely offline.
+- **Fluffy // Financial Q&A Assistant:** Ask Fluffy about your net profit, tax escrow, revenue, labor costs, or top-selling items using simple keyword-based queries, and get instant answers pulled straight from your live dashboard data.
 - **Enterprise Cloud Sync:** Seamlessly teleport optimized financial datasets and inventory ledgers directly to your company's private PostgreSQL database.
 - **Cross-Platform PWA:** A beautiful, responsive, dark-mode glowing aesthetic that can be installed directly to your iPhone or Android home screen.
 
