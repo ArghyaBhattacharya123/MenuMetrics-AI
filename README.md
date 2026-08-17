@@ -1,5 +1,7 @@
 # 📊 MenuMetrics-AI (Enterprise Financial Cockpit)
 
+![MenuMetrics-AI Dashboard](https://via.placeholder.com/1200x600.png?text=MenuMetrics-AI+Dashboard+Screenshot)
+
 🔥 **Live Web Demo:** [Play Here](https://menumetrics-ai.onrender.com)
 > **Note:** The live demo is hosted on a free Render tier. If it hasn't been visited in 15 minutes, it will spin down to save resources. **It may take 30-60 seconds to wake up** on your first visit. Please be patient!
 
@@ -9,7 +11,8 @@ MenuMetrics-AI is an enterprise-grade, one-stop financial operating system built
 Designed as a globally accessible Progressive Web App (PWA), MenuMetrics-AI runs flawlessly across Desktop, Android, and iOS. It features **Fluffy**, a built-in offline AI companion that allows you to talk directly to your financial data using natural language.
 
 ## 🛠️ Tech Stack
-- **Frontend / Framework:** Python & Streamlit (Cross-Platform PWA)
+- **Language:** Python 3.10+
+- **Frontend / Framework:** Streamlit (Cross-Platform PWA)
 - **Data Engineering:** Pandas & NumPy
 - **Machine Learning:** Scikit-Learn (Price Elasticity & Optimization)
 - **Data Visualization:** Plotly (Interactive Charts)
@@ -41,3 +44,6 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 *(The application will automatically open in your default web browser at `http://localhost:8501`)*
+
+## 📄 License
+This project is licensed under the **MIT License** - meaning it is fully open-source and free to fork, modify, or use in commercial enterprise settings.
