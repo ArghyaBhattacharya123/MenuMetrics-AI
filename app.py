@@ -19,7 +19,7 @@ from src.opex_engine import calculate_opex_metrics
 # pyrefly: ignore [missing-import]
 from src.tax_engine import calculate_taxes
 
-st.set_page_config(page_title="MenuMetrics-AI", layout="wide")
+st.set_page_config(page_title="MenuMetrics-AI", layout="wide", page_icon="assets/logo.png")
 
 import streamlit.components.v1 as components
 components.html("""
@@ -224,11 +224,15 @@ st.markdown("""
 st.markdown("<h1 style='color: #38BDF8; text-shadow: 0 0 10px rgba(56, 189, 248, 0.4); margin-bottom: 0.5rem;'>Executive Cockpit</h1>", unsafe_allow_html=True)
 
 # Sidebar
-import os
-if os.path.exists("assets/logo.png"):
-    st.sidebar.image("assets/logo.png", use_container_width=True)
-elif os.path.exists("assets/logo.jpg"):
-    st.sidebar.image("assets/logo.jpg", use_container_width=True)
+with st.sidebar:
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        import os
+        if os.path.exists("assets/logo.png"):
+            st.image("assets/logo.png", use_container_width=True)
+        elif os.path.exists("assets/logo.jpg"):
+            st.image("assets/logo.jpg", use_container_width=True)
+    st.markdown("<br>", unsafe_allow_html=True)
 
 st.sidebar.header("Account Management")
 profile_selection = st.sidebar.selectbox("Select Business Profile", ["Demo Mode (Pre-Loaded)", "Custom Account 1", "Custom Account 2"])
