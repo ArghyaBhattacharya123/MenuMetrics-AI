@@ -24,11 +24,14 @@ def train_and_predict_optimal_price(dish_name, current_cost, current_price, fx_r
     max_price = X['Price_Sold'].max() * 1.5
     
     prices = np.linspace(min_price, max_price, 200).reshape(-1, 1)
+    # pyrefly: ignore
     predicted_quantities = model.predict(prices)
+    # pyrefly: ignore
     predicted_quantities = np.maximum(0, predicted_quantities)
     profits = (prices.flatten() - current_cost) * predicted_quantities
     
-    baseline_demand = model.predict([[current_price]])[0]
+    # pyrefly: ignore
+    baseline_demand = model.predict(np.array([[current_price]]))[0]
     baseline_profit = (current_price - current_cost) * baseline_demand
     
     optimal_idx = np.argmax(profits)
