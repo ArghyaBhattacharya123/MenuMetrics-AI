@@ -1005,15 +1005,15 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                     response = "Your inventory is currently empty."
             
             # 2. Financial KPI NLP Matching
-            elif 'tax' in prompt_lower:
+            elif any(word in prompt_lower for word in ['tax', 'taxes', 'escrow']):
                 if tax_results:
                     response = f"Your current required Tax Escrow is **{currency_symbol}{tax_results['total_tax_escrow']:,.2f}** (which includes {currency_symbol}{tax_results['transaction_tax']:,.2f} in sales tax and {currency_symbol}{tax_results['corporate_tax_liability']:,.2f} in corporate tax)."
                 else:
                     response = "Tax calculations are currently unavailable or missing data."
-            elif 'net profit' in prompt_lower or 'npat' in prompt_lower:
+            elif any(word in prompt_lower for word in ['profit', 'net', 'take home', 'pocket']):
                 profit_val = npat if tax_results else ebitda
                 response = f"Your current estimated Net Profit After Tax (NPAT) is **{currency_symbol}{profit_val:,.2f}**."
-            elif 'revenue' in prompt_lower or 'sales' in prompt_lower:
+            elif any(word in prompt_lower for word in ['revenue', 'earn', 'earned', 'made', 'sales', 'overall']):
                 response = f"Your total gross monthly revenue is projected at **{currency_symbol}{total_gross_revenue:,.2f}**."
             elif 'labor' in prompt_lower or 'staff' in prompt_lower:
                 response = f"Your labor cost ratio is **{recent_labor_ratio:.1f}%**. Total monthly staff salary is **{currency_symbol}{staff:,.0f}**."
