@@ -1001,17 +1001,17 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 item_data = df[df['Dish_Name'] == item_match].iloc[0]
                 responses.append(f"• **{item_match}** sells for **\\{currency_symbol}{item_data['Current_Price']:,.2f}** with a cost of **\\{currency_symbol}{item_data['Cost_to_Make']:,.2f}**. You move approximately **{int(item_data['Monthly_Volume']):,} units** per month.")
                 
-            if re.search(r'\b(most sold|best seller|top selling)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(best|most|top)\b.*\b(sell|selling|sold|item|product)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Monthly_Volume' in df.columns:
                     top_item = df.sort_values(by='Monthly_Volume', ascending=False).iloc[0]
-                    responses.append(f"• Your most sold item is **{str(top_item['Dish_Name'])}** with a monthly volume of **{int(float(top_item['Monthly_Volume']))} units**.")
+                    responses.append(f"• Your best selling item is **{str(top_item['Dish_Name'])}** with **{int(float(top_item['Monthly_Volume']))} units**.")
                 else:
                     responses.append("• I don't have enough data to determine the top seller.")
                     
-            if re.search(r'\b(least sold|worst item|lowest selling)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(worst|least|lowest)\b.*\b(sell|selling|sold|item|product)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Monthly_Volume' in df.columns:
                     bottom_item = df.sort_values(by='Monthly_Volume', ascending=True).iloc[0]
-                    responses.append(f"• Your least sold item is **{str(bottom_item['Dish_Name'])}** with a monthly volume of **{int(float(bottom_item['Monthly_Volume']))} units**.")
+                    responses.append(f"• Your worst selling item is **{str(bottom_item['Dish_Name'])}** with **{int(float(bottom_item['Monthly_Volume']))} units**.")
                 else:
                     responses.append("• I don't have enough data to determine the worst seller.")
                     
