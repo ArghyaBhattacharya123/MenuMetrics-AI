@@ -1037,19 +1037,33 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• I don't have enough data to determine the worst seller.")
                     
-            if re.search(r'\b(costliest|most expensive|most to make|highest cost)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(costliest|highest cost|most to make)\b|\bmost expensive\b.*\b(make|cost|bom)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Cost_to_Make' in df.columns:
                     expensive_item = df.sort_values(by='Cost_to_Make', ascending=False).iloc[0]
                     responses.append(f"• The costliest item to make is **{str(expensive_item['Dish_Name'])}**, which costs **{currency_symbol}{float(expensive_item['Cost_to_Make']):.2f}** per unit.")
                 else:
                     responses.append("• I don't have enough data to determine the costliest item.")
                     
-            if re.search(r'\b(cheapest|least expensive|least to make|lowest cost)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(least to make|lowest cost)\b|\b(cheapest|least expensive)\b.*\b(make|cost|bom)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Cost_to_Make' in df.columns:
                     cheap_item = df.sort_values(by='Cost_to_Make', ascending=True).iloc[0]
                     responses.append(f"• The cheapest item to make is **{str(cheap_item['Dish_Name'])}**, costing only **{currency_symbol}{float(cheap_item['Cost_to_Make']):.2f}** per unit.")
                 else:
                     responses.append("• I don't have enough data to determine the cheapest item.")
+                    
+            if re.search(r'\b(highest|highest priced|most expensive)\b.*\b(price|priced|selling|sold for)\b', prompt_lower, re.IGNORECASE):
+                if not df.empty and 'Current_Price' in df.columns:
+                    high_price_item = df.sort_values(by='Current_Price', ascending=False).iloc[0]
+                    responses.append(f"• The highest priced item on your menu is **{str(high_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(high_price_item['Current_Price']):.2f}**.")
+                else:
+                    responses.append("• I don't have enough data to determine the highest priced item.")
+                    
+            if re.search(r'\b(lowest|cheapest|least expensive)\b.*\b(price|priced|selling|sold for)\b', prompt_lower, re.IGNORECASE):
+                if not df.empty and 'Current_Price' in df.columns:
+                    low_price_item = df.sort_values(by='Current_Price', ascending=True).iloc[0]
+                    responses.append(f"• The lowest priced item on your menu is **{str(low_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(low_price_item['Current_Price']):.2f}**.")
+                else:
+                    responses.append("• I don't have enough data to determine the lowest priced item.")
                     
             if re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Dish_Name' in df.columns:
