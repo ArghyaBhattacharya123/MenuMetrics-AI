@@ -1067,15 +1067,18 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• I don't have enough data to determine the lowest priced item.")
                     
-            if re.search(r'\b(order|sorted|list|all)\b.*\b(lowest to highest|highest to lowest|by price|by sp)\b', prompt_lower, re.IGNORECASE):
-                if not df.empty and 'Current_Price' in df.columns:
-                    asc = False if 'highest to lowest' in prompt_lower else True
-                    sorted_df = df.sort_values(by='Current_Price', ascending=asc)
-                    menu_list = [f"{row['Dish_Name']} ({esc_currency}{float(row['Current_Price']):.2f})" for _, row in sorted_df.iterrows()]
+            if re.search(r'\b(order|sort|sorted|list)\b', prompt_lower, re.IGNORECASE) and re.search(r'\b(sp|cp|price|cost)\b', prompt_lower, re.IGNORECASE):
+                sort_col = 'Cost_to_Make' if re.search(r'\b(cp|cost|make)\b', prompt_lower, re.IGNORECASE) else 'Current_Price'
+                sort_label = 'BOM Cost' if sort_col == 'Cost_to_Make' else 'Selling Price'
+                
+                if not df.empty and sort_col in df.columns:
+                    is_asc = False if re.search(r'\b(highest to lowest|descending|reverse)\b', prompt_lower, re.IGNORECASE) else True
+                    sorted_df = df.sort_values(by=sort_col, ascending=is_asc)
+                    menu_list = [f"{row['Dish_Name']} ({esc_currency}{float(row[sort_col]):.2f})" for _, row in sorted_df.iterrows()]
                     menu_str = ", ".join(menu_list)
-                    responses.append(f"• Here is your menu sorted by price: {menu_str}")
+                    responses.append(f"• Here are your items ordered by {sort_label}: {menu_str}")
                 else:
-                    responses.append("• I don't have enough data to sort the menu.")
+                    responses.append(f"• I don't have enough data to sort by {sort_label}.")
                     
             if re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Dish_Name' in df.columns:
