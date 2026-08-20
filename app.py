@@ -986,6 +986,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             st.rerun()
             
         responses = []
+        historical_flag = False
         
         try:
             # 1. Product & Inventory NLP Matching
@@ -1023,10 +1024,8 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                     responses.append("• Your inventory is currently empty.")
             
             # 2. Financial KPI NLP Matching
-            historical_flag = False
             if re.search(r'\b(last month|yesterday|previous)\b', prompt_lower, re.IGNORECASE):
                 historical_flag = True
-                responses.append("• *Note: I only have access to current real-time data. Here are your current metrics:*")
                 
             time_prefix = "Current Month's " if historical_flag else ""
             
@@ -1070,7 +1069,11 @@ with st.popover("🤖 Fluffy", use_container_width=False):
         except NameError:
             responses.append("• Some data is not fully loaded yet to answer that specific query.")
             
-        if responses:
+        if historical_flag and not responses:
+            response = "• *Note: I currently only have access to this month's real-time data. Historical comparisons are coming soon!*"
+        elif historical_flag and responses:
+            response = "• *Note: I only have access to current real-time data. Here are your current metrics:*\n\n" + "\n\n".join(responses)
+        elif not historical_flag and responses:
             response = "\n\n".join(responses)
         else:
             response = "I'm sorry, I couldn't understand that query. Try asking about 'tax', 'net profit', 'revenue', 'margin', 'labor', or specific inventory items."
