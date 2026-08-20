@@ -1,7 +1,7 @@
 # MenuMetrics-AI: Executive Cockpit (Brain)
 
 ## Project Overview
-MenuMetrics-AI is a fully autonomous, enterprise-grade Executive Financial Cockpit. It simulates real-world business environments using predictive ML algorithms, dynamic variance detection, and comprehensive OpEx, labor efficiency, and tax/escrow modules. It functions as a fully offline or cloud-deployable Progressive Web App (PWA) equipped with a conversational AI agent (Fluffy) and Enterprise Cloud Sync capabilities.
+MenuMetrics-AI is a fully autonomous, enterprise-grade Executive Financial Cockpit. It simulates real-world business environments using predictive ML algorithms, dynamic variance detection, and comprehensive OpEx, labor efficiency, and tax/escrow modules. It functions as a fully offline or cloud-deployable Progressive Web App (PWA) equipped with an offline keyword-based Q&A assistant (Fluffy) and Enterprise Cloud Sync capabilities.
 
 ## Folder Structure
 ```text
@@ -36,8 +36,14 @@ MenuMetrics-AI/
 - **OpEx & Labor Efficiency:** Tracks fixed vs variable ratios, labor cost percentage, and breakeven targets.
 - **Tax & Escrow:** Evaluates Net Profit After Tax (NPAT) and calculates exact escrow requirements.
 - **Executive Waterfall:** Visualizes cash flow dynamically from Gross Revenue down to NPAT.
-- **Enterprise Cloud Sync:** Ability to seamlessly push optimized datasets to private PostgreSQL databases via SQLAlchemy.
-- **Fluffy AI Companion:** Built-in localized NLP agent for instant, offline natural language queries regarding revenue, items, and margins.
+- **Enterprise Cloud Sync:** Ability to seamlessly push active inventory datasets to private PostgreSQL databases via SQLAlchemy.
+- **Fluffy AI Companion:** Built-in offline keyword-based assistant for instant queries regarding revenue, items, and margins. Features include:
+  - **Multi-Intent NLP Aggregator:** Safely processes multiple disparate queries (e.g., "what is my net profit and best seller?") within the same input string using isolated logic blocks and independent boolean flags.
+  - **Item-Level Slicing:** Extracts item-specific margins and revenue (e.g., "how much profit did I make from Coffee?") by dynamically parsing product names against the active inventory catalog.
+  - **Robust Regex & Collision Prevention:** Supports overlapping acronyms (SP vs CP) and prevents logic collisions (e.g., stopping the Help Menu or Generic Catalog from hijacking sorting requests).
+  - **Smart Data Sorting:** Flexibly sorts the full catalog by `Cost_to_Make` or `Current_Price` based on complex conversational verbs (e.g., "order highest to lowest by sp").
+  - **Dynamic OpEx Integration:** Routes Fixed vs Variable expenses dynamically through actual Pandas `.sum()` queries directly against the `opex_df`.
+  - **Cross-Currency Compatibility:** Auto-escapes specific symbols like `$` for Streamlit LaTeX safety while cleanly printing other global symbols like `₹`.
 - **Progressive Web App (PWA):** Aggressive Javascript DOM injection allows the dashboard to be installed locally to any iPhone or Android home screen, running in an immersive standalone mode.
 - **Cloud Deployment Ready:** Successfully configured with a `Procfile` and deployed publicly to Render.com.
 - **Enterprise UX/UI:** Highly polished with a pitch-black OLED theme, responsive media queries for mobile/tablet, and a custom fixed sidebar toggle button.
