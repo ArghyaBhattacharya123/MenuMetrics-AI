@@ -994,8 +994,13 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             # 1. Product & Inventory NLP Matching
             item_match = None
             if not df.empty and 'Dish_Name' in df.columns:
+                prompt_words = re.findall(r'\b\w{4,}\b', prompt_lower)
+                ignore_words = {'revenue', 'profit', 'margin', 'sales', 'item', 'items', 'inventory', 'best', 'worst', 'sold', 'made', 'what', 'much', 'from'}
+                valid_words = [w for w in prompt_words if w not in ignore_words]
+                
                 for item in df['Dish_Name'].unique():
-                    if str(item).lower() in prompt_lower:
+                    item_lower = str(item).lower()
+                    if item_lower in prompt_lower or any(w in item_lower for w in valid_words):
                         item_match = item
                         break
                         
@@ -1032,7 +1037,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• I don't have enough data to determine the worst seller.")
                     
-            if re.search(r'\b(list|show|what is my|view|see)\b.*\b(inventory|items|products)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Dish_Name' in df.columns:
                     total_items = len(df)
                     items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
