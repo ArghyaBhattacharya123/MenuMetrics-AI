@@ -1051,17 +1051,17 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• I don't have enough data to determine the cheapest item.")
                     
-            if re.search(r'\b(highest|highest priced|most expensive)\b.*\b(price|priced|selling|sold for)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(highest|highest priced|most expensive)\b.*\b(price|priced|selling|sold for|sp)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Current_Price' in df.columns:
                     high_price_item = df.sort_values(by='Current_Price', ascending=False).iloc[0]
-                    responses.append(f"• The highest priced item on your menu is **{str(high_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(high_price_item['Current_Price']):.2f}**.")
+                    responses.append(f"• The highest priced item on your menu is **{str(high_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(high_price_item['Current_Price']):.2f}** (Cost to make: **{currency_symbol}{float(high_price_item['Cost_to_Make']):.2f}**).")
                 else:
                     responses.append("• I don't have enough data to determine the highest priced item.")
                     
-            if re.search(r'\b(lowest|cheapest|least expensive)\b.*\b(price|priced|selling|sold for)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(lowest|cheapest|least expensive)\b.*\b(price|priced|selling|sold for|sp)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Current_Price' in df.columns:
                     low_price_item = df.sort_values(by='Current_Price', ascending=True).iloc[0]
-                    responses.append(f"• The lowest priced item on your menu is **{str(low_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(low_price_item['Current_Price']):.2f}**.")
+                    responses.append(f"• The lowest priced item on your menu is **{str(low_price_item['Dish_Name'])}**, selling for **{currency_symbol}{float(low_price_item['Current_Price']):.2f}** (Cost to make: **{currency_symbol}{float(low_price_item['Cost_to_Make']):.2f}**).")
                 else:
                     responses.append("• I don't have enough data to determine the lowest priced item.")
                     
