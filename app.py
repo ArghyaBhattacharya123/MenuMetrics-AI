@@ -1015,7 +1015,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• I don't have enough data to determine the worst seller.")
                     
-            if re.search(r'\b(inventory|items|products)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(list|show|what is my|view|see)\b.*\b(inventory|items|products)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Dish_Name' in df.columns:
                     total_items = len(df)
                     items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
