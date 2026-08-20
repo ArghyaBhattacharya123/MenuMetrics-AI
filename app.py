@@ -987,6 +987,8 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             
         responses = []
         historical_flag = False
+        skip_global_revenue = False
+        skip_global_profit = False
         
         try:
             # 1. Product & Inventory NLP Matching
@@ -999,7 +1001,22 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                         
             if item_match:
                 item_data = df[df['Dish_Name'] == item_match].iloc[0]
-                responses.append(f"• **{item_match}** sells for **\\{currency_symbol}{item_data['Current_Price']:,.2f}** with a cost of **\\{currency_symbol}{item_data['Cost_to_Make']:,.2f}**. You move approximately **{int(item_data['Monthly_Volume']):,} units** per month.")
+                item_qty = int(item_data['Monthly_Volume'])
+                item_price = float(item_data['Current_Price'])
+                item_cost = float(item_data['Cost_to_Make'])
+                
+                if re.search(r'\b(revenue|earn|earned|made|sales)\b', prompt_lower, re.IGNORECASE):
+                    item_rev = item_price * item_qty
+                    responses.append(f"• **{item_match}** generated **\\{currency_symbol}{item_rev:,.2f}** in sales.")
+                    skip_global_revenue = True
+                    
+                if re.search(r'\b(profit|margin)\b', prompt_lower, re.IGNORECASE):
+                    item_profit = (item_price - item_cost) * item_qty
+                    responses.append(f"• **{item_match}** generated **\\{currency_symbol}{item_profit:,.2f}** in gross profit.")
+                    skip_global_profit = True
+                    
+                if not skip_global_revenue and not skip_global_profit:
+                    responses.append(f"• **{item_match}** sells for **\\{currency_symbol}{item_price:,.2f}** with a cost of **\\{currency_symbol}{item_cost:,.2f}**. You move approximately **{item_qty:,} units** per month.")
                 
             if re.search(r'\b(best|most|top)\b.*\b(sell|selling|sold|item|product)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Monthly_Volume' in df.columns:
@@ -1038,11 +1055,11 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append("• Tax calculations are currently unavailable.")
                     
-            if re.search(r'\b(profit|net|take home|pocket)\b', prompt_lower, re.IGNORECASE):
+            if not skip_global_profit and re.search(r'\b(profit|net|take home|pocket)\b', prompt_lower, re.IGNORECASE):
                 profit_val = npat if tax_results else ebitda
                 responses.append(f"• **{time_prefix}Net Profit (NPAT):** \\{currency_symbol}{profit_val:,.2f}")
                 
-            if re.search(r'\b(revenue|earn|earned|made|sales|overall)\b', prompt_lower, re.IGNORECASE):
+            if not skip_global_revenue and re.search(r'\b(revenue|earn|earned|made|sales|overall)\b', prompt_lower, re.IGNORECASE):
                 responses.append(f"• **{time_prefix}Gross Revenue:** \\{currency_symbol}{total_gross_revenue:,.2f}")
                 
             if re.search(r'\b(margin|magrin|margn|profitability)\b', prompt_lower, re.IGNORECASE):
