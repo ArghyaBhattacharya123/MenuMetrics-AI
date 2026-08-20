@@ -979,7 +979,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
         
         user_text = prompt_lower.strip()
         if user_text in ['?', '??'] or re.search(r'\b(help|options)\b', user_text):
-            response = "I can help you with:\n- Revenue & Profit (NPAT)\n- Margins (Gross & EBITDA)\n- Operating Expenses & Labor\n- Best/Worst Selling Items\n- Tax Escrows\n- Breakeven Analysis"
+            response = "I can help you with:\n\n- Revenue & Profit (NPAT)\n- Margins (Gross & EBITDA)\n- Operating Expenses & Labor\n- Best/Worst Selling Items\n- Tax Escrows\n- Breakeven Analysis"
             with st.chat_message("assistant"):
                 st.markdown(response)
             st.session_state.messages.append({"role": "assistant", "content": response})
@@ -989,6 +989,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
         historical_flag = False
         skip_global_revenue = False
         skip_global_profit = False
+        skip_global_opex = False
         
         try:
             # 1. Product & Inventory NLP Matching
@@ -1025,7 +1026,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 
             esc_currency = "\\$" if currency_symbol == "$" else currency_symbol
             
-            if re.search(r'\b(best|top)\b.*\b(item|product|seller)\b|\bmost\b.*\b(sold|selling)\b', prompt_lower, re.IGNORECASE) or 'sold the most' in prompt_lower:
+            if re.search(r'\b(best|top)\b.*\b(item|product|seller)\b|\bmost\b.*\b(sold|selling|sell)\b', prompt_lower, re.IGNORECASE) or any(phrase in prompt_lower for phrase in ['sold the most', 'sell the most']):
                 if not df.empty and 'Monthly_Volume' in df.columns and 'Current_Price' in df.columns and 'Cost_to_Make' in df.columns:
                     top_item = df.sort_values(by='Monthly_Volume', ascending=False).iloc[0]
                     responses.append(f"• Your best selling item is {str(top_item['Dish_Name'])} with {int(float(top_item['Monthly_Volume']))} units (SP: {esc_currency}{float(top_item['Current_Price']):.2f}, CP: {esc_currency}{float(top_item['Cost_to_Make']):.2f}).")
@@ -1095,41 +1096,43 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             time_prefix = "Current Month's " if historical_flag else ""
             
             if re.search(r'\b(breakeven|break even)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Breakeven Revenue:** \\{currency_symbol}{breakeven_revenue:,.2f}")
+                responses.append(f"• **{time_prefix}Breakeven Revenue:** {esc_currency}{breakeven_revenue:,.2f}")
+                skip_global_revenue = True
                 
             if re.search(r'\b(tax|taxes|escrow)\b', prompt_lower, re.IGNORECASE):
                 if tax_results:
-                    responses.append(f"• **{time_prefix}Tax Escrow:** \\{currency_symbol}{tax_results['total_tax_escrow']:,.2f} (Includes \\{currency_symbol}{tax_results['transaction_tax']:,.2f} sales, \\{currency_symbol}{tax_results['corporate_tax_liability']:,.2f} corp)")
+                    responses.append(f"• **{time_prefix}Tax Escrow:** {esc_currency}{tax_results['total_tax_escrow']:,.2f} (Includes {esc_currency}{tax_results['transaction_tax']:,.2f} sales, {esc_currency}{tax_results['corporate_tax_liability']:,.2f} corp)")
                 else:
                     responses.append("• Tax calculations are currently unavailable.")
                     
             if not skip_global_profit and re.search(r'\b(profit|net|take home|pocket)\b', prompt_lower, re.IGNORECASE):
                 profit_val = npat if tax_results else ebitda
-                responses.append(f"• **{time_prefix}Net Profit (NPAT):** \\{currency_symbol}{profit_val:,.2f}")
+                responses.append(f"• **{time_prefix}Net Profit (NPAT):** {esc_currency}{profit_val:,.2f}")
                 
             if not skip_global_revenue and re.search(r'\b(revenue|earn|earned|made|sales|overall)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Gross Revenue:** \\{currency_symbol}{total_gross_revenue:,.2f}")
+                responses.append(f"• **{time_prefix}Gross Revenue:** {esc_currency}{total_gross_revenue:,.2f}")
                 
             if re.search(r'\b(margin|magrin|margn|profitability)\b', prompt_lower, re.IGNORECASE):
                 responses.append(f"• **{time_prefix}Gross Margin:** {gross_margin_pct:.1f}% | **EBITDA Margin:** {ebitda_margin:.2f}%")
                 
             if re.search(r'\b(labor|staff)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Labor Cost:** \\{currency_symbol}{staff:,.0f} ({recent_labor_ratio:.1f}%)")
+                responses.append(f"• **{time_prefix}Labor Cost:** {esc_currency}{staff:,.0f} ({recent_labor_ratio:.1f}%)")
                 
             if re.search(r'\b(ebitda)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}EBITDA:** \\{currency_symbol}{ebitda:,.2f}")
-                
-            if re.search(r'\b(opex|operating expenses?)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Total OpEx:** \\{currency_symbol}{total_opex:,.2f}")
-                
-            if re.search(r'\b(cac|customer acquisition)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}CAC:** \\{currency_symbol}{cac:,.2f}")
-                
-            if re.search(r'\b(valuation|worth|value)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Valuation Estimate:** \\{currency_symbol}{valuation_estimate:,.2f}")
+                responses.append(f"• **{time_prefix}EBITDA:** {esc_currency}{ebitda:,.2f}")
                 
             if re.search(r'\b(fixed vs variable|split)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Fixed OpEx:** \\{currency_symbol}{total_fixed_opex:,.2f} vs **Variable OpEx:** \\{currency_symbol}{(total_opex - total_fixed_opex):,.2f}")
+                responses.append(f"• **{time_prefix}Fixed OpEx:** {esc_currency}{total_fixed_opex:,.2f} vs **Variable OpEx:** {esc_currency}{(total_opex - total_fixed_opex):,.2f}")
+                skip_global_opex = True
+                
+            if not skip_global_opex and re.search(r'\b(opex|operating expenses?)\b', prompt_lower, re.IGNORECASE):
+                responses.append(f"• **{time_prefix}Total OpEx:** {esc_currency}{total_opex:,.2f}")
+                
+            if re.search(r'\b(cac|customer acquisition)\b', prompt_lower, re.IGNORECASE):
+                responses.append(f"• **{time_prefix}CAC:** {esc_currency}{cac:,.2f}")
+                
+            if re.search(r'\b(valuation|worth|value)\b', prompt_lower, re.IGNORECASE):
+                responses.append(f"• **{time_prefix}Valuation Estimate:** {esc_currency}{valuation_estimate:,.2f}")
                 
         except NameError:
             responses.append("• Some data is not fully loaded yet to answer that specific query.")
