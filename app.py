@@ -990,13 +990,19 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             if item_match:
                 item_data = df[df['Dish_Name'] == item_match].iloc[0]
                 response = f"**{item_match}** sells for **{currency_symbol}{item_data['Current_Price']:,.2f}** with a cost of **{currency_symbol}{item_data['Cost_to_Make']:,.2f}**. You move approximately **{int(item_data['Monthly_Volume']):,} units** per month."
-            elif 'most sold' in prompt_lower or 'best seller' in prompt_lower or 'top selling' in prompt_lower:
+            elif re.search(r'\b(most sold|best seller|top selling)\b', prompt_lower):
                 if not df.empty and 'Monthly_Volume' in df.columns:
                     top_item = df.sort_values(by='Monthly_Volume', ascending=False).iloc[0]
                     response = f"Your most sold item is **{str(top_item['Dish_Name'])}** with a monthly volume of **{int(float(top_item['Monthly_Volume']))} units**."
                 else:
                     response = "I don't have enough data to determine the top seller."
-            elif 'inventory' in prompt_lower or 'items' in prompt_lower or 'products' in prompt_lower:
+            elif re.search(r'\b(least sold|worst item|lowest selling)\b', prompt_lower):
+                if not df.empty and 'Monthly_Volume' in df.columns:
+                    bottom_item = df.sort_values(by='Monthly_Volume', ascending=True).iloc[0]
+                    response = f"Your least sold item is **{str(bottom_item['Dish_Name'])}** with a monthly volume of **{int(float(bottom_item['Monthly_Volume']))} units**."
+                else:
+                    response = "I don't have enough data to determine the worst seller."
+            elif re.search(r'\b(inventory|items|products)\b', prompt_lower):
                 if not df.empty and 'Dish_Name' in df.columns:
                     total_items = len(df)
                     items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
@@ -1005,21 +1011,25 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                     response = "Your inventory is currently empty."
             
             # 2. Financial KPI NLP Matching
-            elif any(word in prompt_lower for word in ['tax', 'taxes', 'escrow']):
+            elif re.search(r'\b(breakeven|break even)\b', prompt_lower):
+                response = f"Your breakeven revenue is **{currency_symbol}{breakeven_revenue:,.2f}** per month."
+            elif re.search(r'\b(last month|yesterday|previous)\b', prompt_lower):
+                response = "I currently only have access to this month's real-time data. Historical comparisons are coming soon!"
+            elif re.search(r'\b(tax|taxes|escrow)\b', prompt_lower):
                 if tax_results:
                     response = f"Your current required Tax Escrow is **{currency_symbol}{tax_results['total_tax_escrow']:,.2f}** (which includes {currency_symbol}{tax_results['transaction_tax']:,.2f} in sales tax and {currency_symbol}{tax_results['corporate_tax_liability']:,.2f} in corporate tax)."
                 else:
                     response = "Tax calculations are currently unavailable or missing data."
-            elif any(word in prompt_lower for word in ['profit', 'net', 'take home', 'pocket']):
+            elif re.search(r'\b(profit|net|take home|pocket)\b', prompt_lower):
                 profit_val = npat if tax_results else ebitda
                 response = f"Your current estimated Net Profit After Tax (NPAT) is **{currency_symbol}{profit_val:,.2f}**."
-            elif any(word in prompt_lower for word in ['revenue', 'earn', 'earned', 'made', 'sales', 'overall']):
+            elif re.search(r'\b(revenue|earn|earned|made|sales|overall)\b', prompt_lower):
                 response = f"Your total gross monthly revenue is projected at **{currency_symbol}{total_gross_revenue:,.2f}**."
-            elif 'labor' in prompt_lower or 'staff' in prompt_lower:
-                response = f"Your labor cost ratio is **{recent_labor_ratio:.1f}%**. Total monthly staff salary is **{currency_symbol}{staff:,.0f}**."
-            elif 'margin' in prompt_lower:
+            elif re.search(r'\b(margin|magrin|margn|profitability)\b', prompt_lower):
                 response = f"Your Gross Margin is **{gross_margin_pct:.1f}%** and your EBITDA margin is **{ebitda_margin:.2f}%**."
-            elif 'ebitda' in prompt_lower:
+            elif re.search(r'\b(labor|staff)\b', prompt_lower):
+                response = f"Your labor cost ratio is **{recent_labor_ratio:.1f}%**. Total monthly staff salary is **{currency_symbol}{staff:,.0f}**."
+            elif re.search(r'\b(ebitda)\b', prompt_lower):
                 response = f"Your EBITDA is **{currency_symbol}{ebitda:,.2f}**."
         except NameError:
             response = "Some data is not fully loaded yet to answer that specific query."
