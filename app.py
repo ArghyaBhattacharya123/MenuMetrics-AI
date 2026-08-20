@@ -1023,21 +1023,21 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 if not skip_global_revenue and not skip_global_profit:
                     responses.append(f"• **{item_match}** sells for **\\{currency_symbol}{item_price:,.2f}** with a cost of **\\{currency_symbol}{item_cost:,.2f}**. You move approximately **{item_qty:,} units** per month.")
                 
+            esc_currency = "\\$" if currency_symbol == "$" else currency_symbol
+            
             if re.search(r'\b(best|top)\b.*\b(item|product|seller)\b|\bmost\b.*\b(sold|selling)\b', prompt_lower, re.IGNORECASE) or 'sold the most' in prompt_lower:
-                if not df.empty and 'Monthly_Volume' in df.columns:
+                if not df.empty and 'Monthly_Volume' in df.columns and 'Current_Price' in df.columns and 'Cost_to_Make' in df.columns:
                     top_item = df.sort_values(by='Monthly_Volume', ascending=False).iloc[0]
-                    responses.append(f"• Your best selling item is **{str(top_item['Dish_Name'])}** with **{int(float(top_item['Monthly_Volume']))} units**.")
+                    responses.append(f"• Your best selling item is {str(top_item['Dish_Name'])} with {int(float(top_item['Monthly_Volume']))} units (SP: {esc_currency}{float(top_item['Current_Price']):.2f}, CP: {esc_currency}{float(top_item['Cost_to_Make']):.2f}).")
                 else:
                     responses.append("• I don't have enough data to determine the top seller.")
                     
             if re.search(r'\b(worst|bottom)\b.*\b(item|product|seller)\b|\bleast\b.*\b(sold|selling)\b', prompt_lower, re.IGNORECASE) or 'sold the least' in prompt_lower:
-                if not df.empty and 'Monthly_Volume' in df.columns:
+                if not df.empty and 'Monthly_Volume' in df.columns and 'Current_Price' in df.columns and 'Cost_to_Make' in df.columns:
                     bottom_item = df.sort_values(by='Monthly_Volume', ascending=True).iloc[0]
-                    responses.append(f"• Your worst selling item is **{str(bottom_item['Dish_Name'])}** with **{int(float(bottom_item['Monthly_Volume']))} units**.")
+                    responses.append(f"• Your worst selling item is {str(bottom_item['Dish_Name'])} with {int(float(bottom_item['Monthly_Volume']))} units (SP: {esc_currency}{float(bottom_item['Current_Price']):.2f}, CP: {esc_currency}{float(bottom_item['Cost_to_Make']):.2f}).")
                 else:
                     responses.append("• I don't have enough data to determine the worst seller.")
-                    
-            esc_currency = "\\$" if currency_symbol == "$" else currency_symbol
             
             if re.search(r'\b(costliest|highest cost|highest cp|highest cost price|most to make)\b|\bmost expensive\b.*\b(make|cost|bom|cp)\b', prompt_lower, re.IGNORECASE):
                 if not df.empty and 'Cost_to_Make' in df.columns:
@@ -1080,7 +1080,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append(f"• I don't have enough data to sort by {sort_label}.")
                     
-            if re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products)\b', prompt_lower, re.IGNORECASE):
+            if re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products|menu)\b', prompt_lower, re.IGNORECASE) or 'list my menu' in prompt_lower:
                 if not df.empty and 'Dish_Name' in df.columns:
                     total_items = len(df)
                     items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
