@@ -1081,7 +1081,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 else:
                     responses.append(f"• I don't have enough data to sort by {sort_label}.")
                     
-            if (re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products|menu)\b', prompt_lower, re.IGNORECASE) or 'list my menu' in prompt_lower) and not re.search(r'\b(order|sort|sorted|least|most|highest|lowest)\b', prompt_lower, re.IGNORECASE):
+            if (re.search(r'\b(what|list|show|all)\b.*\b(items|inventory|catalog|products|menu)\b', prompt_lower, re.IGNORECASE) or 'list my menu' in prompt_lower) and not re.search(r'\b(order|sort|sorted|least|most|highest|lowest)\b', prompt_lower, re.IGNORECASE) and 'taxonomy' not in prompt_lower:
                 if not df.empty and 'Dish_Name' in df.columns:
                     total_items = len(df)
                     items_list = ", ".join(df['Dish_Name'].astype(str).tolist()[:5])
@@ -1097,7 +1097,6 @@ with st.popover("🤖 Fluffy", use_container_width=False):
             
             if re.search(r'\b(breakeven|break even)\b', prompt_lower, re.IGNORECASE):
                 responses.append(f"• **{time_prefix}Breakeven Revenue:** {esc_currency}{breakeven_revenue:,.2f}")
-                skip_global_revenue = True
                 
             if re.search(r'\b(tax|taxes|escrow)\b', prompt_lower, re.IGNORECASE):
                 if tax_results:
@@ -1122,7 +1121,12 @@ with st.popover("🤖 Fluffy", use_container_width=False):
                 responses.append(f"• **{time_prefix}EBITDA:** {esc_currency}{ebitda:,.2f}")
                 
             if re.search(r'\b(fixed vs variable|split)\b', prompt_lower, re.IGNORECASE):
-                responses.append(f"• **{time_prefix}Fixed OpEx:** {esc_currency}{total_fixed_opex:,.2f} vs **Variable OpEx:** {esc_currency}{(total_opex - total_fixed_opex):,.2f}")
+                if 'opex_df' in locals() and not opex_df.empty and 'Expense_Type' in opex_df.columns:
+                    calc_fixed = opex_df[opex_df['Expense_Type'] == 'Fixed']['Amount'].sum()
+                    calc_var = opex_df[opex_df['Expense_Type'] == 'Variable']['Amount'].sum()
+                    responses.append(f"• **{time_prefix}Fixed OpEx:** {esc_currency}{calc_fixed:,.2f} vs **Variable OpEx:** {esc_currency}{calc_var:,.2f}")
+                else:
+                    responses.append(f"• **{time_prefix}Fixed OpEx:** {esc_currency}{total_fixed_opex:,.2f} vs **Variable OpEx:** {esc_currency}{(total_opex - total_fixed_opex):,.2f}")
                 skip_global_opex = True
                 
             if not skip_global_opex and re.search(r'\b(opex|operating expenses?)\b', prompt_lower, re.IGNORECASE):
