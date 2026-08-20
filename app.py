@@ -978,7 +978,7 @@ with st.popover("🤖 Fluffy", use_container_width=False):
         prompt_lower = prompt.lower()
         
         user_text = prompt_lower.strip()
-        if user_text in ['?', '??'] or re.search(r'\b(help|options|menu)\b', user_text):
+        if user_text in ['?', '??'] or re.search(r'\b(help|options)\b', user_text):
             response = "I can help you with:\n- Revenue & Profit (NPAT)\n- Margins (Gross & EBITDA)\n- Operating Expenses & Labor\n- Best/Worst Selling Items\n- Tax Escrows\n- Breakeven Analysis"
             with st.chat_message("assistant"):
                 st.markdown(response)
